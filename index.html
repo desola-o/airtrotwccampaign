@@ -76,10 +76,10 @@
         }
 
         .glass-panel {
-            background: rgba(42, 36, 32, 0.75);
-            backdrop-filter: blur(32px);
-            -webkit-backdrop-filter: blur(32px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(42, 36, 32, 0.3);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .pattern-dots {
@@ -127,15 +127,15 @@
     <!-- Desktop Wrapper -->
     <div class="relative z-10 w-full max-w-[1200px] flex flex-col items-center pb-12">
         
-        <!-- Top Centered Image Logo Linked to Website -->
-        <div class="w-full flex justify-center mb-6 lg:mb-8 pt-2 sm:pt-0">
+        <!-- Top Centered Image Logo Linked to Website (Doubled size, reduced gap below) -->
+        <div class="w-full flex justify-center -mt-2 mb-0 lg:-mt-4 lg:mb-1 z-20 relative">
             <a href="https://airtrottravels.com" class="block transition-transform hover:scale-[1.02] active:scale-95 cursor-pointer">
-                <img src="https://i.ibb.co/35PvBjKF/Airtrot-Logo-500px.png" alt="Airtrot Travels" class="h-20 sm:h-28 lg:h-32 w-auto object-contain drop-shadow-2xl">
+                <img src="https://i.ibb.co/ksXB0Xrs/Airtrot-Logo-500px-1.png" alt="Airtrot Travels" class="h-40 sm:h-56 lg:h-64 w-auto object-contain drop-shadow-2xl">
             </a>
         </div>
 
         <!-- Main Panel -->
-        <main class="w-full glass-panel rounded-[24px] lg:rounded-[32px] shadow-glass flex flex-col p-4 sm:p-6 lg:p-8 border-t-white/20 border-l-white/20 overflow-hidden">
+        <main class="w-full glass-panel rounded-[24px] lg:rounded-[32px] shadow-glass flex flex-col p-4 sm:p-6 lg:p-8 border-t-white/20 border-l-white/20 overflow-hidden relative z-10">
             
             <!-- Header Navigation Only -->
             <header class="flex justify-center mb-6 lg:mb-8 shrink-0 w-full">
@@ -288,19 +288,22 @@
                         </button>
                     </div>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 w-full">
+                        
                         <!-- Flight Bookings -->
-                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
-                            <div class="w-[45%] relative overflow-hidden">
-                                <img src="https://i.ibb.co/XrvTzNHQ/Gemini-Generated-Image-29mxzt29mxzt29mx-1.png" alt="Flight Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-col h-full shadow-lg">
+                            <div class="w-full h-40 lg:h-48 relative overflow-hidden shrink-0 bg-black">
+                                <img src="https://i.ibb.co/XrvTzNHQ/Gemini-Generated-Image-29mxzt29mxzt29mx-1.png" alt="Flight Interior" class="w-full h-full object-cover object-top scale-[1.35] origin-top group-hover:scale-[1.45] transition-transform duration-1000">
+                                <!-- Subtle Bokeh Glow -->
+                                <div class="absolute top-0 right-10 w-24 h-24 bg-brand-blue/30 rounded-full blur-[24px] pointer-events-none z-10 mix-blend-screen"></div>
+                                <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-white/20 rounded-full blur-[20px] pointer-events-none z-10 mix-blend-overlay"></div>
                             </div>
-                            <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
-                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 shrink-0 border border-white/5">
+                            <div class="w-full p-5 lg:p-6 flex flex-col flex-1 relative z-10 bg-gradient-to-t from-black/20 to-transparent">
+                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-3 shrink-0 border border-white/5">
                                     <i class="ph ph-airplane-tilt text-white text-lg lg:text-xl"></i>
                                 </div>
                                 <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Flights</h3>
-                                <p class="text-xs lg:text-sm text-white/60 mb-3 pr-2">Secure premium routing to all 16 official host cities.</p>
+                                <p class="text-xs lg:text-sm text-white/60 mb-4 pr-2">Secure premium routing to all 16 official host cities.</p>
                                 <button class="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto self-end shrink-0">
                                     <i class="ph-bold ph-arrow-right text-xs"></i>
                                 </button>
@@ -308,17 +311,19 @@
                         </div>
 
                         <!-- Accommodation Bookings -->
-                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
-                            <div class="w-[45%] relative overflow-hidden">
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-col h-full shadow-lg">
+                            <div class="w-full h-40 lg:h-48 relative overflow-hidden shrink-0 bg-black">
                                 <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&h=400&fit=crop" alt="Hotel Stay" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
+                                <!-- Subtle Bokeh Glow -->
+                                <div class="absolute -top-4 -left-4 w-28 h-28 bg-brand-green/30 rounded-full blur-[24px] pointer-events-none z-10 mix-blend-screen"></div>
+                                <div class="absolute bottom-0 right-8 w-20 h-20 bg-white/20 rounded-full blur-[20px] pointer-events-none z-10 mix-blend-overlay"></div>
                             </div>
-                            <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
-                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 shrink-0 border border-white/5">
+                            <div class="w-full p-5 lg:p-6 flex flex-col flex-1 relative z-10 bg-gradient-to-t from-black/20 to-transparent">
+                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-3 shrink-0 border border-white/5">
                                     <i class="ph ph-buildings text-white text-lg lg:text-xl"></i>
                                 </div>
                                 <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Stays</h3>
-                                <p class="text-xs lg:text-sm text-white/60 mb-3 pr-2">Curated luxury accommodations near the stadiums.</p>
+                                <p class="text-xs lg:text-sm text-white/60 mb-4 pr-2">Curated luxury accommodations near the stadiums.</p>
                                 <button class="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto self-end shrink-0">
                                     <i class="ph-bold ph-arrow-right text-xs"></i>
                                 </button>
@@ -326,17 +331,19 @@
                         </div>
 
                         <!-- Match Tickets -->
-                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
-                            <div class="w-[45%] relative overflow-hidden">
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-col h-full shadow-lg">
+                            <div class="w-full h-40 lg:h-48 relative overflow-hidden shrink-0 bg-black">
                                 <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop" alt="Stadium Matches" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
+                                <!-- Subtle Bokeh Glow -->
+                                <div class="absolute -bottom-6 -left-2 w-32 h-32 bg-brand-red/30 rounded-full blur-[30px] pointer-events-none z-10 mix-blend-screen"></div>
+                                <div class="absolute top-2 right-4 w-16 h-16 bg-white/20 rounded-full blur-[15px] pointer-events-none z-10 mix-blend-overlay"></div>
                             </div>
-                            <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
-                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 shrink-0 border border-white/5">
+                            <div class="w-full p-5 lg:p-6 flex flex-col flex-1 relative z-10 bg-gradient-to-t from-black/20 to-transparent">
+                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-3 shrink-0 border border-white/5">
                                     <i class="ph ph-ticket text-white text-lg lg:text-xl"></i>
                                 </div>
                                 <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Tickets</h3>
-                                <p class="text-xs lg:text-sm text-white/60 mb-3 pr-2">Guaranteed premium seating and VIP hospitality.</p>
+                                <p class="text-xs lg:text-sm text-white/60 mb-4 pr-2">Guaranteed premium seating and VIP hospitality.</p>
                                 <button class="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto self-end shrink-0">
                                     <i class="ph-bold ph-arrow-right text-xs"></i>
                                 </button>
@@ -344,17 +351,19 @@
                         </div>
 
                         <!-- Official Merch -->
-                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
-                            <div class="w-[45%] relative overflow-hidden">
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-col h-full shadow-lg">
+                            <div class="w-full h-40 lg:h-48 relative overflow-hidden shrink-0 bg-black">
                                 <img src="https://i.ibb.co/Rpvy7pX9/281025-adidas-Home-Jerseys-Mobile-Header.webp" alt="Official Merchandise Jerseys" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
+                                <!-- Subtle Bokeh Glow -->
+                                <div class="absolute top-4 -left-6 w-24 h-24 bg-yellow-500/20 rounded-full blur-[25px] pointer-events-none z-10 mix-blend-screen"></div>
+                                <div class="absolute -bottom-2 -right-2 w-20 h-20 bg-white/20 rounded-full blur-[20px] pointer-events-none z-10 mix-blend-overlay"></div>
                             </div>
-                            <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
-                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 shrink-0 border border-white/5">
+                            <div class="w-full p-5 lg:p-6 flex flex-col flex-1 relative z-10 bg-gradient-to-t from-black/20 to-transparent">
+                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-3 shrink-0 border border-white/5">
                                     <i class="ph ph-shopping-bag text-white text-lg lg:text-xl"></i>
                                 </div>
                                 <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Merch</h3>
-                                <p class="text-xs lg:text-sm text-white/60 mb-3 pr-2">Pre-order exclusive gear and official memorabilia.</p>
+                                <p class="text-xs lg:text-sm text-white/60 mb-4 pr-2">Pre-order exclusive gear and official memorabilia.</p>
                                 <button class="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto self-end shrink-0">
                                     <i class="ph-bold ph-arrow-right text-xs"></i>
                                 </button>
@@ -362,17 +371,19 @@
                         </div>
 
                         <!-- Visa Checker -->
-                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
-                            <div class="w-[45%] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=600&h=400&fit=crop" alt="Stadium Fans" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-col h-full shadow-lg">
+                            <div class="w-full h-40 lg:h-48 relative overflow-hidden shrink-0 bg-black">
+                                <img src="https://i.ibb.co/v6m4r67B/anete-lusina-r-FKBUw-Lg-WQ-unsplash.jpg" alt="Visa Checker" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                <!-- Subtle Bokeh Glow -->
+                                <div class="absolute inset-x-0 bottom-0 h-20 bg-brand-blue/20 blur-[20px] pointer-events-none z-10 mix-blend-screen"></div>
+                                <div class="absolute top-2 left-6 w-16 h-16 bg-white/20 rounded-full blur-[15px] pointer-events-none z-10 mix-blend-overlay"></div>
                             </div>
-                            <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
-                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 shrink-0 border border-white/5">
+                            <div class="w-full p-5 lg:p-6 flex flex-col flex-1 relative z-10 bg-gradient-to-t from-black/20 to-transparent">
+                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-3 shrink-0 border border-white/5">
                                     <i class="ph ph-identification-card text-white text-lg lg:text-xl"></i>
                                 </div>
                                 <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Visa Checker</h3>
-                                <p class="text-xs lg:text-sm text-white/60 mb-3 pr-2">Check entry requirements for USA, Canada, and Mexico.</p>
+                                <p class="text-xs lg:text-sm text-white/60 mb-4 pr-2">Check entry requirements for USA, Canada, and Mexico.</p>
                                 <button class="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto self-end shrink-0">
                                     <i class="ph-bold ph-arrow-right text-xs"></i>
                                 </button>
@@ -380,17 +391,19 @@
                         </div>
 
                         <!-- Visa Pass Eligibility -->
-                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
-                            <div class="w-[45%] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&h=400&fit=crop" alt="Stadium Crowd" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-col h-full shadow-lg">
+                            <div class="w-full h-40 lg:h-48 relative overflow-hidden shrink-0 bg-black">
+                                <img src="https://i.ibb.co/XrRJzjVZ/geojango-maps-CWbb-JW-7-Fsw-unsplash-1.jpg" alt="Visa Pass" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                <!-- Subtle Bokeh Glow -->
+                                <div class="absolute top-0 right-0 w-28 h-28 bg-brand-green/30 rounded-full blur-[25px] pointer-events-none z-10 mix-blend-screen"></div>
+                                <div class="absolute bottom-4 left-4 w-16 h-16 bg-white/20 rounded-full blur-[15px] pointer-events-none z-10 mix-blend-overlay"></div>
                             </div>
-                            <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
-                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 shrink-0 border border-white/5">
+                            <div class="w-full p-5 lg:p-6 flex flex-col flex-1 relative z-10 bg-gradient-to-t from-black/20 to-transparent">
+                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-3 shrink-0 border border-white/5">
                                     <i class="ph ph-shield-check text-white text-lg lg:text-xl"></i>
                                 </div>
                                 <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Visa Pass</h3>
-                                <p class="text-xs lg:text-sm text-white/60 mb-3 pr-2">Fast-track entry eligibility for official ticket holders.</p>
+                                <p class="text-xs lg:text-sm text-white/60 mb-4 pr-2">Fast-track entry eligibility for official ticket holders.</p>
                                 <button class="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto self-end shrink-0">
                                     <i class="ph-bold ph-arrow-right text-xs"></i>
                                 </button>
@@ -398,19 +411,23 @@
                         </div>
                         
                         <!-- Host City Guides (Full Width Banner Style) -->
-                        <div class="sm:col-span-2 bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
-                            <div class="w-[45%] sm:w-[50%] relative overflow-hidden">
+                        <div class="sm:col-span-2 lg:col-span-3 bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-col shadow-lg">
+                            <div class="w-full h-40 sm:h-56 lg:h-64 relative overflow-hidden shrink-0 bg-black">
                                 <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&h=400&fit=crop" alt="Host City Skyline" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
+                                <!-- Subtle Bokeh Glow -->
+                                <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-brand-blue/20 rounded-full blur-[30px] pointer-events-none z-10 mix-blend-screen -translate-y-1/2"></div>
+                                <div class="absolute bottom-4 right-1/4 w-24 h-24 bg-brand-green/20 rounded-full blur-[20px] pointer-events-none z-10 mix-blend-screen"></div>
                             </div>
-                            <div class="w-[55%] sm:w-[50%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
-                                <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-2 shrink-0 border border-white/5">
-                                    <i class="ph ph-map-trifold text-white text-lg lg:text-xl"></i>
+                            <div class="w-full p-5 lg:p-6 flex flex-col lg:flex-row lg:items-center justify-between relative z-10 bg-gradient-to-t from-black/20 to-transparent gap-4">
+                                <div class="flex flex-col">
+                                    <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/10 flex items-center justify-center mb-3 shrink-0 border border-white/5">
+                                        <i class="ph ph-map-trifold text-white text-lg lg:text-xl"></i>
+                                    </div>
+                                    <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Host City Guides</h3>
+                                    <p class="text-xs lg:text-sm text-white/60 max-w-xl">Explore local attractions, transport networks, and dining hotspots in all 16 official host cities.</p>
                                 </div>
-                                <h3 class="text-base lg:text-lg font-bold text-white mb-1 leading-tight tracking-wide">Host City Guides</h3>
-                                <p class="text-xs lg:text-sm text-white/60 mb-3 max-w-sm">Explore local attractions, transport networks, and dining hotspots in all 16 official host cities.</p>
-                                <button class="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto self-end shrink-0">
-                                    <i class="ph-bold ph-arrow-right text-xs"></i>
+                                <button class="w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white text-black flex items-center justify-center shadow-md group-hover:bg-brand-blue group-hover:text-white transition-colors mt-auto lg:mt-0 self-end lg:self-center shrink-0">
+                                    <i class="ph-bold ph-arrow-right text-xs lg:text-lg"></i>
                                 </button>
                             </div>
                         </div>
