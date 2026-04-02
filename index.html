@@ -107,7 +107,8 @@
         }
         
         .animate-scroll {
-            animation: scroll 120s linear infinite;
+            /* Increased speed: reduced duration from 120s to 30s */
+            animation: scroll 30s linear infinite;
         }
         
         .pause-scroll {
@@ -127,22 +128,24 @@
     <!-- Desktop Wrapper -->
     <div class="relative z-10 w-full max-w-[1200px] flex flex-col items-center pb-24">
         
+        <!-- Top Centered Image Logo (Resized to be 2x bigger) -->
+        <div class="w-full flex justify-center mb-6 lg:mb-8 pt-2 sm:pt-0">
+            <img src="https://i.ibb.co/35PvBjKF/Airtrot-Logo-500px.png" alt="Airtrot Travels" class="h-20 sm:h-28 lg:h-32 w-auto object-contain drop-shadow-2xl">
+        </div>
+
         <!-- Main Panel -->
         <main class="w-full glass-panel rounded-[24px] lg:rounded-[32px] shadow-glass flex flex-col p-4 sm:p-6 lg:p-8 border-t-white/20 border-l-white/20 overflow-hidden">
             
-            <!-- Header (Logo beside Nav) -->
-            <header class="flex items-center justify-between mb-6 lg:mb-8 shrink-0 w-full px-2">
-                <!-- Logo inside container -->
-                <img src="https://i.ibb.co/35PvBjKF/Airtrot-Logo-500px.png" alt="Airtrot Travels" class="h-10 sm:h-12 lg:h-14 w-auto object-contain drop-shadow-lg">
-
-                <!-- Scrollable Nav (Hidden on mobile) -->
-                <nav class="hidden sm:flex items-center bg-black/20 p-1.5 rounded-full border border-white/5 shadow-inner">
-                    <div class="flex items-center min-w-max">
-                        <button class="px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white transition-all">Home</button>
-                        <button class="px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white transition-all">Flights</button>
-                        <button class="px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white transition-all">Accommodation</button>
-                        <button class="px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white transition-all">Match tickets</button>
-                        <button class="px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white transition-all">Shop</button>
+            <!-- Header Navigation Only -->
+            <header class="flex justify-center mb-6 lg:mb-8 shrink-0 w-full">
+                <!-- Scrollable Nav -->
+                <nav class="flex items-center bg-black/20 p-1.5 rounded-full border border-white/5 shadow-inner w-full sm:w-auto overflow-x-auto hide-scrollbar">
+                    <div class="flex items-center min-w-max mx-auto">
+                        <button class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Home</button>
+                        <button class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Flights</button>
+                        <button class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Accommodation</button>
+                        <button class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Match tickets</button>
+                        <button class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Shop</button>
                     </div>
                 </nav>
             </header>
@@ -162,7 +165,7 @@
                             <div class="inline-flex items-center gap-2 mb-3 lg:mb-4 bg-white/80 lg:bg-white/60 px-3 py-1.5 rounded-full w-fit backdrop-blur-sm border border-black/5 shadow-sm lg:shadow-none">
                                 <span class="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-brand-blue">Agency Partner</span>
                             </div>
-                            <h1 class="text-[26px] sm:text-3xl lg:text-4xl leading-[1.15] font-bold tracking-tight mb-3 lg:mb-4 text-[#25201D] drop-shadow-sm lg:drop-shadow-none">
+                            <h1 class="text-[28px] sm:text-3xl lg:text-4xl leading-[1.15] font-bold tracking-tight mb-3 lg:mb-4 text-[#25201D] drop-shadow-sm lg:drop-shadow-none">
                                 Experience the<br>
                                 <span class="text-brand-green">FIFA World Cup 2026™</span><br>
                                 — Without the Stress
@@ -342,7 +345,7 @@
                         <!-- Official Merch -->
                         <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
                             <div class="w-[45%] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&h=400&fit=crop" alt="Official Merchandise" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                <img src="https://images.unsplash.com/photo-1580087433295-ab2600c1030e?w=600&h=400&fit=crop" alt="Official Merchandise Jerseys" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
                                 <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
                             </div>
                             <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
@@ -360,7 +363,7 @@
                         <!-- Visa Checker -->
                         <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
                             <div class="w-[45%] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1563905317-d73976547cd4?q=80&w=800&auto=format&fit=crop" alt="Airport Immigration Controls" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=600&h=400&fit=crop" alt="Stadium Fans" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
                                 <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
                             </div>
                             <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
@@ -378,7 +381,7 @@
                         <!-- Visa Pass Eligibility -->
                         <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
                             <div class="w-[45%] relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1544015759-22cbbf3782ae?q=80&w=800&auto=format&fit=crop" alt="Airport Security Hall" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&h=400&fit=crop" alt="Stadium Crowd" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
                                 <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#2A2420]"></div>
                             </div>
                             <div class="w-[55%] p-5 lg:p-6 flex flex-col justify-center relative z-10 bg-gradient-to-l from-black/40 to-transparent">
@@ -393,7 +396,7 @@
                             </div>
                         </div>
                         
-                        <!-- Host City Guides (Banner Style) -->
+                        <!-- Host City Guides (Full Width Banner Style) -->
                         <div class="sm:col-span-2 bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative group cursor-pointer flex flex-row min-h-[160px] lg:min-h-[180px] shadow-lg">
                             <div class="w-[45%] sm:w-[50%] relative overflow-hidden">
                                 <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&h=400&fit=crop" alt="Host City Skyline" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
@@ -485,342 +488,212 @@
                                 
                                 <!-- Scroller Set 1 -->
                                 <div class="flex gap-3 lg:gap-4 pr-3 lg:pr-4">
+                                    <!-- CAN -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ca.svg" alt="CAN Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">CAN</span>
                                     </div>
+                                    <!-- MEX -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/mx.svg" alt="MEX Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">MEX</span>
                                     </div>
+                                    <!-- USA -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/us.svg" alt="USA Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">USA</span>
                                     </div>
+                                    <!-- ALG -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/dz.svg" alt="ALG Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">ALG</span>
                                     </div>
+                                    <!-- ARG -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ar.svg" alt="ARG Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">ARG</span>
                                     </div>
+                                    <!-- AUS -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/au.svg" alt="AUS Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">AUS</span>
                                     </div>
+                                    <!-- AUT -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/at.svg" alt="AUT Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">AUT</span>
                                     </div>
+                                    <!-- BEL -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/be.svg" alt="BEL Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">BEL</span>
                                     </div>
+                                    <!-- BRA -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/br.svg" alt="BRA Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">BRA</span>
                                     </div>
+                                    <!-- CPV -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/cv.svg" alt="CPV Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">CPV</span>
                                     </div>
+                                    <!-- COL -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/co.svg" alt="COL Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">COL</span>
                                     </div>
+                                    <!-- CRO -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/hr.svg" alt="CRO Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">CRO</span>
                                     </div>
+                                    <!-- CUW -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/cw.svg" alt="CUW Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">CUW</span>
                                     </div>
+                                    <!-- CIV -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ci.svg" alt="CIV Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">CIV</span>
                                     </div>
+                                    <!-- ECU -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ec.svg" alt="ECU Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">ECU</span>
                                     </div>
+                                    <!-- EGY -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/eg.svg" alt="EGY Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">EGY</span>
                                     </div>
+                                    <!-- ENG -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/gb-eng.svg" alt="ENG Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">ENG</span>
                                     </div>
+                                    <!-- FRA -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/fr.svg" alt="FRA Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">FRA</span>
                                     </div>
+                                    <!-- GER -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/de.svg" alt="GER Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">GER</span>
                                     </div>
+                                    <!-- GHA -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/gh.svg" alt="GHA Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">GHA</span>
                                     </div>
+                                    <!-- HAI -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ht.svg" alt="HAI Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">HAI</span>
                                     </div>
+                                    <!-- IRN -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ir.svg" alt="IRN Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">IRN</span>
                                     </div>
+                                    <!-- JPN -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/jp.svg" alt="JPN Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">JPN</span>
                                     </div>
+                                    <!-- JOR -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/jo.svg" alt="JOR Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">JOR</span>
                                     </div>
+                                    <!-- KOR -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/kr.svg" alt="KOR Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">KOR</span>
                                     </div>
+                                    <!-- MAR -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ma.svg" alt="MAR Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">MAR</span>
                                     </div>
+                                    <!-- NED -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/nl.svg" alt="NED Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">NED</span>
                                     </div>
+                                    <!-- NZL -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/nz.svg" alt="NZL Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">NZL</span>
                                     </div>
+                                    <!-- NOR -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/no.svg" alt="NOR Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">NOR</span>
                                     </div>
+                                    <!-- PAN -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/pa.svg" alt="PAN Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">PAN</span>
                                     </div>
+                                    <!-- PAR -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/py.svg" alt="PAR Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">PAR</span>
                                     </div>
+                                    <!-- POR -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/pt.svg" alt="POR Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">POR</span>
                                     </div>
+                                    <!-- QAT -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/qa.svg" alt="QAT Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">QAT</span>
                                     </div>
+                                    <!-- KSA -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/sa.svg" alt="KSA Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">KSA</span>
                                     </div>
+                                    <!-- SCO -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/gb-sct.svg" alt="SCO Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">SCO</span>
                                     </div>
+                                    <!-- SEN -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/sn.svg" alt="SEN Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">SEN</span>
                                     </div>
+                                    <!-- RSA -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/za.svg" alt="RSA Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">RSA</span>
                                     </div>
+                                    <!-- ESP -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/es.svg" alt="ESP Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">ESP</span>
                                     </div>
+                                    <!-- SUI -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ch.svg" alt="SUI Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">SUI</span>
                                     </div>
+                                    <!-- TUN -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/tn.svg" alt="TUN Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">TUN</span>
                                     </div>
+                                    <!-- URU -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/uy.svg" alt="URU Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">URU</span>
                                     </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/uz.svg" alt="UZB Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">UZB</span>
-                                    </div>
-                                </div>
-
-                                <!-- Scroller Set 2 (Exact Duplicate for seamless loop) -->
-                                <div class="flex gap-3 lg:gap-4 pr-3 lg:pr-4">
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ca.svg" alt="CAN Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">CAN</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/mx.svg" alt="MEX Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">MEX</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/us.svg" alt="USA Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">USA</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/dz.svg" alt="ALG Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">ALG</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ar.svg" alt="ARG Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">ARG</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/au.svg" alt="AUS Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">AUS</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/at.svg" alt="AUT Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">AUT</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/be.svg" alt="BEL Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">BEL</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/br.svg" alt="BRA Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">BRA</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/cv.svg" alt="CPV Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">CPV</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/co.svg" alt="COL Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">COL</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/hr.svg" alt="CRO Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">CRO</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/cw.svg" alt="CUW Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">CUW</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ci.svg" alt="CIV Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">CIV</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ec.svg" alt="ECU Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">ECU</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/eg.svg" alt="EGY Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">EGY</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/gb-eng.svg" alt="ENG Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">ENG</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/fr.svg" alt="FRA Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">FRA</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/de.svg" alt="GER Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">GER</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/gh.svg" alt="GHA Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">GHA</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ht.svg" alt="HAI Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">HAI</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ir.svg" alt="IRN Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">IRN</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/jp.svg" alt="JPN Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">JPN</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/jo.svg" alt="JOR Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">JOR</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/kr.svg" alt="KOR Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">KOR</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ma.svg" alt="MAR Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">MAR</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/nl.svg" alt="NED Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">NED</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/nz.svg" alt="NZL Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">NZL</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/no.svg" alt="NOR Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">NOR</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/pa.svg" alt="PAN Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">PAN</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/py.svg" alt="PAR Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">PAR</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/pt.svg" alt="POR Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">POR</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/qa.svg" alt="QAT Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">QAT</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/sa.svg" alt="KSA Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">KSA</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/gb-sct.svg" alt="SCO Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">SCO</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/sn.svg" alt="SEN Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">SEN</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/za.svg" alt="RSA Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">RSA</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/es.svg" alt="ESP Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">ESP</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/ch.svg" alt="SUI Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">SUI</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/tn.svg" alt="TUN Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">TUN</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
-                                        <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/uy.svg" alt="URU Flag" class="w-full h-full object-cover"></div>
-                                        <span class="text-sm lg:text-base font-bold tracking-wide">URU</span>
-                                    </div>
+                                    <!-- UZB -->
                                     <div class="flex items-center gap-2 lg:gap-3 bg-white/5 px-3 lg:px-4 py-1.5 lg:py-2.5 rounded-xl border border-white/10 shrink-0 cursor-pointer hover:bg-white/10 transition-colors">
                                         <div class="w-6 h-6 lg:w-8 lg:h-8 rounded-md overflow-hidden flex shadow-md shrink-0 bg-white"><img src="https://flagcdn.com/uz.svg" alt="UZB Flag" class="w-full h-full object-cover"></div>
                                         <span class="text-sm lg:text-base font-bold tracking-wide">UZB</span>
