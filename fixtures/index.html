@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>All Fixtures - FIFA World Cup 2026™ | Airtrot Travels</title>
+    <meta name="description" content="View the complete match schedule and fixtures for the FIFA World Cup 2026™. Plan your travel to all 16 host cities with Airtrot Travels.">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#3CAC3B',
+                            blue: '#2A398D',
+                            red: '#E61D25',
+                            gold: '#FFC107',
+                            dark: '#1a1a1a',
+                            panel: '#352D28',
+                            lightCard: '#EAE6E2'
+                        }
+                    },
+                    boxShadow: {
+                        'glass': '0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255,255,255,0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #000; }
+        html::-webkit-scrollbar { width: 8px; height: 8px; }
+        html::-webkit-scrollbar-track { background: #0A0808; }
+        html::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 10px; }
+        html::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.25); }
+        
+        .glass-panel {
+            background: rgba(42, 36, 32, 0.3);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .pattern-dots {
+            background-image: radial-gradient(rgba(0,0,0,0.06) 1.5px, transparent 1.5px);
+            background-size: 16px 16px;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Sticky Date Header Styling */
+        .sticky-date {
+            position: sticky;
+            top: 20px;
+            z-index: 30;
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden text-white font-sans relative flex flex-col items-center selection:bg-brand-blue selection:text-white p-4 sm:p-6 lg:p-12">
+
+    <!-- Background Environment -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <img src="https://i.ibb.co/TM900jHn/sernadas-pica-6lgibj-Fm3-M-unsplash.jpg" alt="Stadium Atmosphere" class="w-full h-full object-cover object-center scale-105 filter brightness-50">
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#0A0808]/80 via-[#2A221E]/60 to-[#1A1A24]/50"></div>
+        <div class="absolute inset-0 backdrop-blur-[4px]"></div>
+    </div>
+
+    <!-- Desktop Wrapper -->
+    <div class="relative z-10 w-full max-w-[1000px] flex flex-col items-center pb-12">
+        
+        <!-- Top Centered Image Logo Linked to Website -->
+        <div class="w-full flex justify-center mb-2 lg:mb-3 pt-0 sm:pt-1 z-20 relative">
+            <a href="https://airtrottravels.com" class="block transition-transform hover:scale-[1.02] active:scale-95 cursor-pointer flex items-center justify-center">
+                <img src="https://i.ibb.co/ksXB0Xrs/Airtrot-Logo-500px-1.png" alt="Airtrot Travels" class="w-[200px] sm:w-[260px] lg:w-[320px] h-auto object-contain drop-shadow-2xl -my-2 sm:-my-4 lg:-my-6">
+            </a>
+        </div>
+
+        <!-- Main Panel -->
+        <main class="w-full glass-panel rounded-[24px] lg:rounded-[32px] shadow-glass flex flex-col p-4 sm:p-6 lg:p-8 border-t-white/20 border-l-white/20 overflow-hidden relative z-10">
+            
+            <!-- Header Navigation Only (Hidden on Mobile) -->
+            <header class="hidden sm:flex justify-center mb-6 lg:mb-8 shrink-0 w-full">
+                <!-- Scrollable Nav -->
+                <nav class="flex items-center bg-black/20 p-1.5 rounded-full border border-white/5 shadow-inner w-full sm:w-auto overflow-x-auto hide-scrollbar">
+                    <div class="flex items-center min-w-max mx-auto">
+                        <a href="https://airtrottravels.com" class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Home</a>
+                        <a href="https://wc2026.airtrottravels.com/flights" target="_blank" class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Flights</a>
+                        <a href="https://tap3.myagentgenie.com/funmikoleosho/hotels/" target="_blank" class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Accommodation</a>
+                        <a href="tel:+13186181178" class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Match tickets</a>
+                        <a href="https://store.fifa.com/en-gb" target="_blank" class="px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all">Shop</a>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Title Section -->
+            <div class="w-full flex flex-col items-center text-center mb-8 lg:mb-10">
+                <div class="inline-flex items-center gap-2 mb-3 bg-brand-green/20 border border-brand-green/30 text-brand-green px-4 py-1.5 rounded-full shadow-inner">
+                    <i class="ph-fill ph-calendar-check"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Official Match Schedule</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-white drop-shadow-sm">
+                    Tournament Fixtures
+                </h1>
+                <p class="text-sm lg:text-base font-medium text-white/60 max-w-xl leading-relaxed">
+                    Follow the action across all 16 host cities. Find your match, note the gate, and let our concierge handle the logistics.
+                </p>
+                <div class="mt-6 flex gap-4">
+                    <a href="tel:+13186181178" class="bg-white text-black px-6 py-3 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-brand-lightCard transition-all shadow-lg active:scale-95">
+                        Call Concierge <i class="ph-bold ph-phone-call"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Loader / Container -->
+            <div id="fixtures-container" class="w-full flex flex-col gap-8 relative">
+                <!-- Data will render here dynamically via JS -->
+            </div>
+
+        </main>
+        
+        <!-- Legal Disclaimer -->
+        <div class="w-full text-center mt-6 lg:mt-8 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+            <p class="text-[9px] sm:text-[10px] text-white/60 max-w-3xl mx-auto leading-relaxed">
+                Disclaimer: Airtrot Travels is an independent travel agency. All FIFA, World Cup, and related trademarks, logos, and copyrights are the exclusive property of FIFA. This site is not affiliated with, endorsed by, or sponsored by FIFA. All match dates, times, and locations are subject to official FIFA changes.
+            </p>
+        </div>
+    </div>
+
+    <!-- Raw Data Block -->
+    <script type="text/template" id="raw-fixtures-data">
+Thursday 11 June 2026
+Mexico
+20:00
+South Africa
+First Stage
+·
+Group A
+·
+Mexico City Stadium
+(Mexico City)
+Friday 12 June 2026
+Korea Republic
+03:00
+Czechia
+First Stage
+·
+Group A
+·
+Guadalajara Stadium
+(Guadalajara)
+Canada
+20:00
+Bosnia-Herzegovina
+First Stage
+·
+Group B
+·
+Toronto Stadium
+(Toronto)
+Saturday 13 June 2026
+USA
+02:00
+Paraguay
+First Stage
+·
+Group D
+·
+Los Angeles Stadium
+(Los Angeles)
+Qatar
+20:00
+Switzerland
+First Stage
+·
+Group B
+·
+San Francisco Bay Area Stadium
+(San Francisco Bay Area)
+Brazil
+23:00
+Morocco
+First Stage
+·
+Group C
+·
+New York/New Jersey Stadium
+(New York)
+Sunday 14 June 2026
+Haiti
+02:00
+Scotland
+First Stage
+·
+Group C
+·
+Boston Stadium
+(Boston)
+Australia
+05:00
+Türkiye
+First Stage
+·
+Group D
+·
+BC Place Vancouver
+(Vancouver)
+Germany
+18:00
+Curaçao
+First Stage
+·
+Group E
+·
+Houston Stadium
+(Houston)
+Netherlands
+21:00
+Japan
+First Stage
+·
+Group F
+·
+Dallas Stadium
+(Dallas)
+Monday 15 June 2026
+Côte d'Ivoire
+00:00
+Ecuador
+First Stage
+·
+Group E
+·
+Philadelphia Stadium
+(Philadelphia)
+Sweden
+03:00
+Tunisia
+First Stage
+·
+Group F
+·
+Monterrey Stadium
+(Monterrey)
+Spain
+17:00
+Cabo Verde
+First Stage
+·
+Group H
+·
+Atlanta Stadium
+(Atlanta)
+Belgium
+20:00
+Egypt
+First Stage
+·
+Group G
+·
+Seattle Stadium
+(Seattle)
+Saudi Arabia
+23:00
+Uruguay
+First Stage
+·
+Group H
+·
+Miami Stadium
+(Miami)
+Tuesday 16 June 2026
+IR Iran
+02:00
+New Zealand
+First Stage
+·
+Group G
+·
+Los Angeles Stadium
+(Los Angeles)
+France
+20:00
+Senegal
+First Stage
+·
+Group I
+·
+New York/New Jersey Stadium
+(New York)
+Iraq
+23:00
+Norway
+First Stage
+·
+Group I
+·
+Boston Stadium
+(Boston)
+Wednesday 17 June 2026
+Argentina
+02:00
+Algeria
+First Stage
+·
+Group J
+·
+Kansas City Stadium
+(Kansas City)
+Austria
+05:00
+Jordan
+First Stage
+·
+Group J
+·
+San Francisco Bay Area Stadium
+(San Francisco Bay Area)
+Portugal
+18:00
+Congo DR
+First Stage
+·
+Group K
+·
+Houston Stadium
+(Houston)
+England
+21:00
+Croatia
+First Stage
+·
+Group L
+·
+Dallas Stadium
+(Dallas)
+Thursday 18 June 2026
+Ghana
+00:00
+Panama
+First Stage
+·
+Group L
+·
+Toronto Stadium
+(Toronto)
+Uzbekistan
+03:00
+Colombia
+First Stage
+·
+Group K
+·
+Mexico City Stadium
+(Mexico City)
+Czechia
+17:00
+South Africa
+First Stage
+·
+Group A
+·
+Atlanta Stadium
+(Atlanta)
+Switzerland
+20:00
+Bosnia-Herzegovina
+First Stage
+·
+Group B
+·
+Los Angeles Stadium
+(Los Angeles)
+Canada
+23:00
+Qatar
+First Stage
+·
+Group B
+·
+BC Place Vancouver
+(Vancouver)
+Friday 19 June 2026
+Mexico
+02:00
+Korea Republic
+First Stage
+·
+Group A
+·
+Guadalajara Stadium
+(Guadalajara)
+USA
+20:00
+Australia
+First Stage
+·
+Group D
+·
+Seattle Stadium
+(Seattle)
+Scotland
+23:00
+Morocco
+First Stage
+·
+Group C
+·
+Boston Stadium
+(Boston)
+Saturday 20 June 2026
+Brazil
+01:30
+Haiti
+First Stage
+·
+Group C
+·
+Philadelphia Stadium
+(Philadelphia)
+Türkiye
+04:00
+Paraguay
+First Stage
+·
+Group D
+·
+San Francisco Bay Area Stadium
+(San Francisco Bay Area)
+Netherlands
+18:00
+Sweden
+First Stage
+·
+Group F
+·
+Houston Stadium
+(Houston)
+Germany
+21:00
+Côte d'Ivoire
+First Stage
+·
+Group E
+·
+Toronto Stadium
+(Toronto)
+Sunday 21 June 2026
+Ecuador
+01:00
+Curaçao
+First Stage
+·
+Group E
+·
+Kansas City Stadium
+(Kansas City)
+Tunisia
+05:00
+Japan
+First Stage
+·
+Group F
+·
+Monterrey Stadium
+(Monterrey)
+Spain
+17:00
+Saudi Arabia
+First Stage
+·
+Group H
+·
+Atlanta Stadium
+(Atlanta)
+Belgium
+20:00
+IR Iran
+First Stage
+·
+Group G
+·
+Los Angeles Stadium
+(Los Angeles)
+Uruguay
+23:00
+Cabo Verde
+First Stage
+·
+Group H
+·
+Miami Stadium
+(Miami)
+Monday 22 June 2026
+New Zealand
+02:00
+Egypt
+First Stage
+·
+Group G
+·
+BC Place Vancouver
+(Vancouver)
+Argentina
+18:00
+Austria
+First Stage
+·
+Group J
+·
+Dallas Stadium
+(Dallas)
+France
+22:00
+Iraq
+First Stage
+·
+Group I
+·
+Philadelphia Stadium
+(Philadelphia)
+Tuesday 23 June 2026
+Norway
+01:00
+Senegal
+First Stage
+·
+Group I
+·
+New York/New Jersey Stadium
+(New York)
+Jordan
+04:00
+Algeria
+First Stage
+·
+Group J
+·
+San Francisco Bay Area Stadium
+(San Francisco Bay Area)
+Portugal
+18:00
+Uzbekistan
+First Stage
+·
+Group K
+·
+Houston Stadium
+(Houston)
+England
+21:00
+Ghana
+First Stage
+·
+Group L
+·
+Boston Stadium
+(Boston)
+Wednesday 24 June 2026
+Panama
+00:00
+Croatia
+First Stage
+·
+Group L
+·
+Toronto Stadium
+(Toronto)
+Colombia
+03:00
+Congo DR
+First Stage
+·
+Group K
+·
+Guadalajara Stadium
+(Guadalajara)
+Switzerland
+20:00
+Canada
+First Stage
+·
+Group B
+·
+BC Place Vancouver
+(Vancouver)
+Bosnia-Herzegovina
+20:00
+Qatar
+First Stage
+·
+Group B
+·
+Seattle Stadium
+(Seattle)
+Scotland
+23:00
+Brazil
+First Stage
+·
+Group C
+·
+Miami Stadium
+(Miami)
+Morocco
+23:00
+Haiti
+First Stage
+·
+Group C
+·
+Atlanta Stadium
+(Atlanta)
+Thursday 25 June 2026
+Czechia
+02:00
+Mexico
+First Stage
+·
+Group A
+·
+Mexico City Stadium
+(Mexico City)
+South Africa
+02:00
+Korea Republic
+First Stage
+·
+Group A
+·
+Monterrey Stadium
+(Monterrey)
+Curaçao
+21:00
+Côte d'Ivoire
+First Stage
+·
+Group E
+·
+Philadelphia Stadium
+(Philadelphia)
+Ecuador
+21:00
+Germany
+First Stage
+·
+Group E
+·
+New York/New Jersey Stadium
+(New York)
+Friday 26 June 2026
+Japan
+00:00
+Sweden
+First Stage
+·
+Group F
+·
+Dallas Stadium
+(Dallas)
+Tunisia
+00:00
+Netherlands
+First Stage
+·
+Group F
+·
+Kansas City Stadium
+(Kansas City)
+Türkiye
+03:00
+USA
+First Stage
+·
+Group D
+·
+Los Angeles Stadium
+(Los Angeles)
+Paraguay
+03:00
+Australia
+First Stage
+·
+Group D
+·
+San Francisco Bay Area Stadium
+(San Francisco Bay Area)
+Norway
+20:00
+France
+First Stage
+·
+Group I
+·
+Boston Stadium
+(Boston)
+Senegal
+20:00
+Iraq
+First Stage
+·
+Group I
+·
+Toronto Stadium
+(Toronto)
+Saturday 27 June 2026
+Cabo Verde
+01:00
+Saudi Arabia
+First Stage
+·
+Group H
+·
+Houston Stadium
+(Houston)
+Uruguay
+01:00
+Spain
+First Stage
+·
+Group H
+·
+Guadalajara Stadium
+(Guadalajara)
+Egypt
+04:00
+IR Iran
+First Stage
+·
+Group G
+·
+Seattle Stadium
+(Seattle)
+New Zealand
+04:00
+Belgium
+First Stage
+·
+Group G
+·
+BC Place Vancouver
+(Vancouver)
+Panama
+22:00
+England
+First Stage
+·
+Group L
+·
+New York/New Jersey Stadium
+(New York)
+Croatia
+22:00
+Ghana
+First Stage
+·
+Group L
+·
+Philadelphia Stadium
+(Philadelphia)
+Sunday 28 June 2026
+Colombia
+00:30
+Portugal
+First Stage
+·
+Group K
+·
+Miami Stadium
+(Miami)
+Congo DR
+00:30
+Uzbekistan
+First Stage
+·
+Group K
+·
+Atlanta Stadium
+(Atlanta)
+Algeria
+03:00
+Austria
+First Stage
+·
+Group J
+·
+Kansas City Stadium
+(Kansas City)
+Jordan
+03:00
+Argentina
+First Stage
+·
+Group J
+·
+Dallas Stadium
+(Dallas)
+2A
+20:00
+2B
+Round of 32
+·
+Los Angeles Stadium
+(Los Angeles)
+Monday 29 June 2026
+1C
+18:00
+2F
+Round of 32
+·
+Houston Stadium
+(Houston)
+1E
+21:30
+3ABCDF
+Round of 32
+·
+Boston Stadium
+(Boston)
+Tuesday 30 June 2026
+1F
+02:00
+2C
+Round of 32
+·
+Monterrey Stadium
+(Monterrey)
+2E
+18:00
+2I
+Round of 32
+·
+Dallas Stadium
+(Dallas)
+1I
+22:00
+3CDFGH
+Round of 32
+·
+New York/New Jersey Stadium
+(New York)
+Wednesday 01 July 2026
+1A
+02:00
+3CEFHI
+Round of 32
+·
+Mexico City Stadium
+(Mexico City)
+1L
+17:00
+3EHIJK
+Round of 32
+·
+Atlanta Stadium
+(Atlanta)
+1G
+21:00
+3AEHIJ
+Round of 32
+·
+Seattle Stadium
+(Seattle)
+Thursday 02 July 2026
+1D
+01:00
+3BEFIJ
+Round of 32
+·
+San Francisco Bay Area Stadium
+(San Francisco Bay Area)
+1H
+20:00
+2J
+Round of 32
+·
+Los Angeles Stadium
+(Los Angeles)
+Friday 03 July 2026
+2K
+00:00
+2L
+Round of 32
+·
+Toronto Stadium
+(Toronto)
+1B
+04:00
+3EFGIJ
+Round of 32
+·
+BC Place Vancouver
+(Vancouver)
+2D
+19:00
+2G
+Round of 32
+·
+Dallas Stadium
+(Dallas)
+1J
+23:00
+2H
+Round of 32
+·
+Miami Stadium
+(Miami)
+Saturday 04 July 2026
+1K
+02:30
+3DEIJL
+Round of 32
+·
+Kansas City Stadium
+(Kansas City)
+W73
+18:00
+W75
+Round of 16
+·
+Houston Stadium
+(Houston)
+W74
+22:00
+W77
+Round of 16
+·
+Philadelphia Stadium
+(Philadelphia)
+Sunday 05 July 2026
+W76
+21:00
+W78
+Round of 16
+·
+New York/New Jersey Stadium
+(New York)
+Monday 06 July 2026
+W79
+01:00
+W80
+Round of 16
+·
+Mexico City Stadium
+(Mexico City)
+W83
+20:00
+W84
+Round of 16
+·
+Dallas Stadium
+(Dallas)
+Tuesday 07 July 2026
+W81
+01:00
+W82
+Round of 16
+·
+Seattle Stadium
+(Seattle)
+W86
+17:00
+W88
+Round of 16
+·
+Atlanta Stadium
+(Atlanta)
+W85
+21:00
+W87
+Round of 16
+·
+BC Place Vancouver
+(Vancouver)
+Thursday 09 July 2026
+W89
+21:00
+W90
+Quarter-final
+·
+Boston Stadium
+(Boston)
+Friday 10 July 2026
+W93
+20:00
+W94
+Quarter-final
+·
+Los Angeles Stadium
+(Los Angeles)
+Saturday 11 July 2026
+W91
+22:00
+W92
+Quarter-final
+·
+Miami Stadium
+(Miami)
+Sunday 12 July 2026
+W95
+02:00
+W96
+Quarter-final
+·
+Kansas City Stadium
+(Kansas City)
+Tuesday 14 July 2026
+W97
+20:00
+W98
+Semi-final
+·
+Dallas Stadium
+(Dallas)
+Wednesday 15 July 2026
+W99
+20:00
+W100
+Semi-final
+·
+Atlanta Stadium
+(Atlanta)
+Saturday 18 July 2026
+RU101
+22:00
+RU102
+Play-off for third place
+·
+Miami Stadium
+(Miami)
+Sunday 19 July 2026
+W101
+20:00
+W102
+Final
+·
+New York/New Jersey Stadium
+(New York)
+    </script>
+
+    <!-- UI Generator Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // ISO country codes dictionary for Flag CDN
+            const flags = {
+                "Mexico": "mx", "South Africa": "za", "Korea Republic": "kr", "Czechia": "cz",
+                "Canada": "ca", "Bosnia-Herzegovina": "ba", "USA": "us", "Paraguay": "py",
+                "Qatar": "qa", "Switzerland": "ch", "Brazil": "br", "Morocco": "ma",
+                "Haiti": "ht", "Scotland": "gb-sct", "Australia": "au", "Türkiye": "tr",
+                "Germany": "de", "Curaçao": "cw", "Netherlands": "nl", "Japan": "jp",
+                "Côte d'Ivoire": "ci", "Ecuador": "ec", "Sweden": "se", "Tunisia": "tn",
+                "Spain": "es", "Cabo Verde": "cv", "Belgium": "be", "Egypt": "eg",
+                "Saudi Arabia": "sa", "Uruguay": "uy", "IR Iran": "ir", "New Zealand": "nz",
+                "France": "fr", "Senegal": "sn", "Iraq": "iq", "Norway": "no",
+                "Argentina": "ar", "Algeria": "dz", "Austria": "at", "Jordan": "jo",
+                "Portugal": "pt", "Congo DR": "cd", "England": "gb-eng", "Croatia": "hr",
+                "Ghana": "gh", "Panama": "pa", "Uzbekistan": "uz", "Colombia": "co"
+            };
+
+            function getFlagElement(teamName) {
+                if (flags[teamName]) {
+                    return `<img src="https://flagcdn.com/${flags[teamName]}.svg" alt="${teamName}" class="w-full h-full object-cover">`;
+                }
+                // Fallback for placeholders like 1A, W73, etc.
+                return `<div class="w-full h-full flex items-center justify-center bg-white/5"><i class="ph-fill ph-shield-check text-white/40 text-lg"></i></div>`;
+            }
+
+            // Parser Engine
+            const rawData = document.getElementById('raw-fixtures-data').textContent;
+            const lines = rawData.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+            
+            const fixtures = [];
+            let currentDate = "";
+            let i = 0;
+
+            while (i < lines.length) {
+                if (/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/.test(lines[i])) {
+                    currentDate = lines[i];
+                    i++;
+                } else {
+                    const team1 = lines[i];
+                    const time = lines[i+1];
+                    const team2 = lines[i+2];
+                    
+                    // Consume detail lines until next date or next match's time signature
+                    let detailLines = [];
+                    let j = i + 3;
+                    while(j < lines.length && !/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/.test(lines[j]) && !/^\d{2}:\d{2}$/.test(lines[j+1])) {
+                        detailLines.push(lines[j]);
+                        j++;
+                    }
+                    
+                    const detailStr = detailLines.join(' ').replace(/\s+·\s+/g, ' · ');
+                    const parts = detailStr.split('·').map(s => s.trim());
+                    
+                    let stage = parts[0] || '';
+                    let group = '';
+                    let stadium = '';
+
+                    if (parts.length === 3) {
+                        group = parts[1];
+                        stadium = parts[2];
+                    } else if (parts.length === 2) {
+                        stadium = parts[1]; // Knockouts omit group
+                    }
+
+                    fixtures.push({ date: currentDate, team1, time, team2, stage, group, stadium });
+                    i = j;
+                }
+            }
+
+            // Group by Date
+            const grouped = {};
+            fixtures.forEach(f => {
+                if (!grouped[f.date]) grouped[f.date] = [];
+                grouped[f.date].push(f);
+            });
+
+            // Render to DOM
+            const container = document.getElementById('fixtures-container');
+            let html = '';
+
+            for (const [date, matches] of Object.entries(grouped)) {
+                
+                // Format Date nicely
+                const dateParts = date.split(' ');
+                const formattedDate = `<span class="text-white/50 mr-2">${dateParts[0]}</span> ${dateParts.slice(1).join(' ')}`;
+
+                html += `
+                <div class="flex flex-col mb-4">
+                    <!-- Sticky Date Header -->
+                    <div class="sticky-date bg-[#1A1614]/80 border border-white/10 rounded-xl px-5 py-3 mb-4 shadow-lg flex items-center justify-between">
+                        <h2 class="text-lg font-bold tracking-wide">${formattedDate}</h2>
+                        <span class="text-[10px] uppercase font-bold text-brand-green bg-brand-green/10 px-3 py-1 rounded-full">${matches.length} Match${matches.length > 1 ? 'es' : ''}</span>
+                    </div>
+
+                    <!-- Match Cards -->
+                    <div class="flex flex-col gap-3">
+                `;
+
+                matches.forEach(m => {
+                    html += `
+                        <div class="bg-[#2A2420] border border-white/5 rounded-[20px] p-4 flex flex-col md:flex-row items-center gap-4 hover:bg-[#352D28] hover:border-white/15 transition-all duration-300 group shadow-md relative overflow-hidden">
+                            
+                            <!-- Left Info -->
+                            <div class="flex flex-col items-center md:items-start w-full md:w-32 shrink-0 border-b md:border-b-0 md:border-r border-white/5 pb-4 md:pb-0 md:pr-4 relative z-10">
+                                <span class="text-3xl font-black text-white group-hover:text-brand-green transition-colors">${m.time}</span>
+                                <span class="text-[9px] text-white/50 uppercase tracking-widest mt-1 text-center md:text-left">${m.stage}</span>
+                                ${m.group ? `<span class="text-xs font-bold text-brand-gold mt-1">${m.group}</span>` : ''}
+                            </div>
+                            
+                            <!-- Middle VS -->
+                            <div class="flex-1 flex items-center justify-between w-full px-2 md:px-4 relative z-10 py-2 md:py-0">
+                                <!-- Team 1 -->
+                                <div class="flex items-center gap-3 w-[42%] justify-end">
+                                    <span class="font-bold text-sm md:text-base text-right max-w-[100px] sm:max-w-none leading-tight">${m.team1}</span>
+                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-black border-[2px] border-white/10 shrink-0 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                                        ${getFlagElement(m.team1)}
+                                    </div>
+                                </div>
+                                <!-- VS Badge -->
+                                <div class="w-[16%] flex justify-center shrink-0">
+                                    <span class="text-[10px] md:text-xs font-black text-white/40 bg-black/60 px-2.5 py-1.5 rounded-lg border border-white/5 shadow-inner">VS</span>
+                                </div>
+                                <!-- Team 2 -->
+                                <div class="flex items-center gap-3 w-[42%] justify-start">
+                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-black border-[2px] border-white/10 shrink-0 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                                        ${getFlagElement(m.team2)}
+                                    </div>
+                                    <span class="font-bold text-sm md:text-base text-left max-w-[100px] sm:max-w-none leading-tight">${m.team2}</span>
+                                </div>
+                            </div>
+
+                            <!-- Right Location -->
+                            <div class="w-full md:w-48 shrink-0 flex flex-col items-center md:items-end justify-center pt-4 md:pt-0 border-t md:border-t-0 border-white/5 relative z-10">
+                                <div class="flex items-start gap-2 mb-1.5 md:mb-1">
+                                    <i class="ph-fill ph-map-pin text-brand-blue mt-0.5 md:mt-0 text-sm md:text-base"></i>
+                                    <span class="text-xs md:text-sm text-white/80 text-center md:text-right font-medium leading-tight">
+                                        ${m.stadium.replace(/\(([^)]+)\)/g, '<br><span class="text-[10px] text-white/40 uppercase tracking-wider font-bold">$1</span>')}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `</div></div>`;
+            }
+
+            container.innerHTML = html;
+        });
+    </script>
+</body>
+</html>
