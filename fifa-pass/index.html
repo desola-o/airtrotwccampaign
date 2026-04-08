@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Airtrot Travels - Visa & Travel Logistics</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#3CAC3B',
+                            blue: '#2A398D',
+                            red: '#E61D25',
+                            dark: '#1a1a1a',
+                            panel: '#352D28',
+                            lightCard: '#EAE6E2',
+                            navBtn: '#4C423C'
+                        }
+                    },
+                    boxShadow: {
+                        'glass': '0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255,255,255,0.1)',
+                        'neon': '0 0 20px rgba(255,255,255,0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000;
+        }
+        
+        html::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        html::-webkit-scrollbar-track {
+            background: #0A0808;
+        }
+        html::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+        }
+        html::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .glass-panel {
+            background: rgba(42, 36, 32, 0.3);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .pattern-dots {
+            background-image: radial-gradient(rgba(0,0,0,0.06) 1.5px, transparent 1.5px);
+            background-size: 16px 16px;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden text-white font-sans relative flex flex-col items-center selection:bg-brand-blue selection:text-white px-4 pb-4 pt-1 sm:px-6 sm:pb-6 sm:pt-2 lg:px-12 lg:pb-12 lg:pt-4">
+
+    <!-- Background Environment -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1600&h=900&fit=crop" alt="Airtrot Travels Background" class="w-full h-full object-cover object-center scale-105 filter brightness-50">
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#0A0808]/80 via-[#2A221E]/60 to-[#1A1A24]/50"></div>
+        <div class="absolute inset-0 backdrop-blur-[4px]"></div>
+    </div>
+
+    <!-- Desktop Wrapper -->
+    <div class="relative z-10 w-full max-w-[1200px] flex flex-col items-center pb-12">
+        
+        <!-- Top Centered Image Logo Linked to Website -->
+        <div class="w-full flex justify-center mb-0 z-20 relative">
+            <a href="https://airtrottravels.com" class="block transition-transform hover:scale-[1.02] active:scale-95 cursor-pointer flex items-center justify-center">
+                <img src="https://i.ibb.co/ksXB0Xrs/Airtrot-Logo-500px-1.png" alt="Airtrot Travels" class="w-[200px] sm:w-[260px] lg:w-[320px] h-auto object-contain drop-shadow-2xl -my-5 sm:-my-8 lg:-my-12">
+            </a>
+        </div>
+
+        <!-- Main Panel -->
+        <main class="w-full glass-panel rounded-[24px] lg:rounded-[32px] shadow-glass flex flex-col p-4 sm:p-6 lg:p-8 border-t-white/20 border-l-white/20 overflow-hidden relative z-10 mt-1 sm:mt-2 lg:mt-4">
+            
+            <!-- Back to Home Button -->
+            <div class="w-full flex justify-start mb-6 lg:mb-8 shrink-0 relative z-20">
+                <a href="#" class="inline-flex items-center gap-2 text-white/70 hover:text-white bg-white/5 hover:bg-white/10 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all border border-white/10 text-xs sm:text-sm font-medium shadow-sm backdrop-blur-md active:scale-95">
+                    <i class="ph-bold ph-arrow-left"></i> Back to Home
+                </a>
+            </div>
+
+            <!-- Content Area Stack -->
+            <div class="w-full flex flex-col gap-6 lg:gap-8">
+                
+                <!-- TOP SECTION: Hero Intro -->
+                <div class="bg-brand-lightCard rounded-[24px] lg:rounded-[28px] p-6 lg:p-8 text-[#1A1614] relative overflow-hidden flex shadow-lg group">
+                    <div class="absolute inset-0 pattern-dots opacity-40"></div>
+                    <div class="absolute right-0 top-0 bottom-0 w-[40%] bg-gradient-to-l from-brand-blue/10 to-transparent pointer-events-none"></div>
+                    <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-brand-green/20 rounded-full blur-[40px] pointer-events-none"></div>
+
+                    <div class="relative z-20 w-full flex flex-col">
+                        <div class="inline-flex items-center gap-2 mb-3 lg:mb-4 bg-white/80 px-3 py-1.5 rounded-full w-fit backdrop-blur-sm border border-black/5 shadow-sm">
+                            <span class="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-brand-blue">Visa & Logistics Support</span>
+                        </div>
+                        <h1 class="text-[28px] sm:text-3xl lg:text-4xl leading-[1.15] font-bold tracking-tight mb-3 lg:mb-4 text-[#25201D]">
+                            ⚽ Experience the 2026 World Cup<br>
+                            <span class="text-brand-green">Without the Stress</span>
+                        </h1>
+                        <h2 class="text-base lg:text-lg font-bold text-[#4A423C] mb-3">Comprehensive Visa & Logistics Support by Airtrot Travels.</h2>
+                        <p class="text-sm lg:text-base font-medium text-[#4A423C] max-w-3xl leading-relaxed">
+                            The 2026 World Cup is making history across Canada, Mexico, and the United States. While the matches will be legendary, the travel requirements are complex. Don’t let visa delays or paperwork keep you on the sidelines. <strong>At Airtrot Travels, we specialize in cross-border logistics to ensure you spend your time in the stands, not in a queue.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- GENERAL REQUIREMENTS & REMINDERS (The Essentials) -->
+                <div>
+                    <h3 class="text-lg lg:text-xl font-bold text-white mb-4 flex items-center gap-2 px-1">
+                        <i class="ph-fill ph-passport text-brand-lightCard"></i> What You Need to Know (The Essentials)
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                        <!-- General Docs -->
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] p-5 lg:p-6 flex flex-col relative overflow-hidden shadow-lg">
+                            <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-blue/20 rounded-full blur-[30px] pointer-events-none"></div>
+                            
+                            <p class="text-sm text-white/70 mb-4">To enter the host nations by air, sea, or land, every traveler must have:</p>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl border border-white/5">
+                                    <div class="bg-brand-blue/20 p-2 rounded-lg text-brand-blue shrink-0"><i class="ph-bold ph-book-open text-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm font-semibold text-white">A Valid Passport</p>
+                                        <p class="text-xs text-white/50">Must be unexpired (FIFA recommends validity for at least a year after your trip).</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl border border-white/5">
+                                    <div class="bg-brand-green/20 p-2 rounded-lg text-brand-green shrink-0"><i class="ph-bold ph-airplane-tilt text-lg"></i></div>
+                                    <div>
+                                        <p class="text-sm font-semibold text-white">Valid Entry Authorization</p>
+                                        <p class="text-xs text-white/50">Depending on your nationality, this means a Visa, an eTA (Canada), or an ESTA (USA).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reminders -->
+                        <div class="bg-brand-red/10 border border-brand-red/30 rounded-[20px] lg:rounded-[24px] p-5 lg:p-6 flex flex-col relative overflow-hidden shadow-lg">
+                            <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-red/20 rounded-full blur-[30px] pointer-events-none"></div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                <i class="ph-fill ph-warning-circle text-brand-red"></i> 🚨 Important Reminder
+                            </h3>
+                            <div class="flex flex-col gap-3 text-sm text-white/90">
+                                <p><strong>A match ticket does not guarantee entry into any country.</strong></p>
+                                <p class="text-white/70">Visa processing times are peaking—apply through Airtrot Travels today to get ahead of the curve.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THE NEW FIFA PASS (USA) -->
+                <div class="w-full bg-gradient-to-br from-[#1A1A24] to-[#2A2420] border border-brand-blue/30 rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 flex flex-col relative shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-1/4 w-64 h-64 bg-brand-blue/10 rounded-full blur-[60px] pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-10 w-48 h-48 bg-brand-green/10 rounded-full blur-[50px] pointer-events-none"></div>
+
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-8 h-8 rounded-full overflow-hidden shadow-md shrink-0 border border-white/10 bg-white">
+                            <img src="https://flagcdn.com/us.svg" alt="USA Flag" class="w-full h-full object-cover">
+                        </div>
+                        <h2 class="text-xl lg:text-2xl font-bold text-white tracking-tight">Travel to the United States: The "FIFA PASS"</h2>
+                    </div>
+                    
+                    <p class="text-sm lg:text-base text-white/80 max-w-3xl mb-6">
+                        If you are traveling to the U.S. and require a visitor visa (B1/B2), you may be eligible for the FIFA PASS. This is an expedited system for ticket holders to secure priority visa interviews.
+                    </p>
+
+                    <div class="bg-black/30 rounded-2xl p-5 border border-white/5">
+                        <h4 class="text-brand-lightCard font-semibold mb-4 text-sm uppercase tracking-wider flex items-center gap-2">
+                            <i class="ph-bold ph-handshake"></i> How Airtrot Travels Simplifies the U.S. Process
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                                <h5 class="text-white font-bold mb-2 text-base flex items-center gap-2"><i class="ph-fill ph-navigation-arrow text-brand-blue"></i> FIFA PASS Guidance</h5>
+                                <p class="text-white/60">We help you navigate the opt-in process on FIFA.com to ensure your data matches your passport perfectly.</p>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                                <h5 class="text-white font-bold mb-2 text-base flex items-center gap-2"><i class="ph-fill ph-file-text text-brand-green"></i> DS-160 Support</h5>
+                                <p class="text-white/60">Our experts assist in completing your U.S. visa application accurately to avoid common rejection triggers.</p>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                                <h5 class="text-white font-bold mb-2 text-base flex items-center gap-2"><i class="ph-fill ph-users-three text-brand-lightCard"></i> Interview Readiness</h5>
+                                <p class="text-white/60">We guide you through scheduling and preparing for your priority appointment with confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CANADA & MEXICO (2 COL GRID) -->
+                <div>
+                    <h3 class="text-lg lg:text-xl font-bold text-white mb-4 flex items-center gap-2 px-1">
+                        <i class="ph-fill ph-map-trifold text-brand-lightCard"></i> Canada & Mexico: Border-Crossing Simplified
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 w-full">
+                        
+                        <!-- Canada -->
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative flex flex-col h-full shadow-lg p-5 lg:p-6">
+                            <div class="absolute -top-6 -right-6 w-24 h-24 bg-red-500/20 rounded-full blur-[25px] pointer-events-none"></div>
+                            
+                            <div class="flex items-center gap-3 mb-5 border-b border-white/10 pb-4">
+                                <div class="w-10 h-10 rounded-full overflow-hidden shadow-md shrink-0 border border-white/10 bg-white">
+                                    <img src="https://flagcdn.com/ca.svg" alt="Canada Flag" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="text-xl font-bold text-white tracking-wide">Canada</h3>
+                            </div>
+                            
+                            <div class="flex-1 flex flex-col gap-4 text-sm">
+                                <div>
+                                    <h4 class="font-bold text-white/90 mb-1 border-l-2 border-red-500 pl-2">eTA vs. Visitor Visa</h4>
+                                    <ul class="list-disc list-inside text-white/60 text-xs ml-2 mt-1 space-y-1">
+                                        <li><strong>eTA:</strong> For visa-exempt nationals arriving by air. Electronically linked to your passport.</li>
+                                        <li><strong>Visitor Visa:</strong> Required for most other travelers.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white/90 mb-1 border-l-2 border-red-500 pl-2">Traveling with Minors?</h4>
+                                    <p class="text-white/60 text-xs pl-2.5">Canada has strict rules for travelers under 18. We ensure you have the correct notarized authorizations ready.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mexico -->
+                        <div class="bg-[#2A2420] border border-white/10 rounded-[20px] lg:rounded-[24px] overflow-hidden relative flex flex-col h-full shadow-lg p-5 lg:p-6">
+                            <div class="absolute -top-6 -right-6 w-24 h-24 bg-green-500/20 rounded-full blur-[25px] pointer-events-none"></div>
+                            
+                            <div class="flex items-center gap-3 mb-5 border-b border-white/10 pb-4">
+                                <div class="w-10 h-10 rounded-full overflow-hidden shadow-md shrink-0 border border-white/10 bg-white">
+                                    <img src="https://flagcdn.com/mx.svg" alt="Mexico Flag" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="text-xl font-bold text-white tracking-wide">Mexico: 180 Days of Football</h3>
+                            </div>
+                            
+                            <div class="flex-1 flex flex-col gap-4 text-sm">
+                                <div>
+                                    <h4 class="font-bold text-white/90 mb-1 border-l-2 border-green-500 pl-2">Visa-Free Entry</h4>
+                                    <p class="text-white/60 text-xs pl-2.5">Available for many nationalities and holders of valid U.S., Canadian, Japanese, or UK visas.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white/90 mb-1 border-l-2 border-green-500 pl-2">Electronic Authorization (SAE)</h4>
+                                    <p class="text-white/60 text-xs pl-2.5">Specific air-travel options for nationals of Ukraine, Turkey, and Russia.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white/90 mb-1 border-l-2 border-green-500 pl-2">E-GATES</h4>
+                                    <p class="text-white/60 text-xs pl-2.5">We’ll show you how to use automated kiosks in Mexico City, Cancún, and Guadalajara for lightning-fast entry.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TRUSTED TRAVELER PROGRAMS -->
+                <div class="bg-black/20 rounded-[24px] lg:rounded-[32px] border border-white/5 p-6 lg:p-8 flex flex-col relative shadow-inner">
+                    <h3 class="text-xl lg:text-2xl font-semibold text-white mb-2 flex items-center gap-2">⚡ Skip the Lines: Trusted Traveler Programs</h3>
+                    <p class="text-sm text-white/60 mb-6 max-w-3xl">With millions of fans expected, border lines will be long. We help eligible clients apply for Trusted Traveler programs to use expedited "Fast-Track" lanes at major airports.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+                        <!-- Global Entry -->
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl flex flex-col items-center text-center">
+                            <i class="ph-fill ph-seal-check text-3xl text-brand-blue mb-2"></i>
+                            <h4 class="font-bold text-white mb-1">Global Entry</h4>
+                            <p class="text-xs text-white/50">United States</p>
+                        </div>
+                        
+                        <!-- NEXUS -->
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl flex flex-col items-center text-center">
+                            <i class="ph-fill ph-arrows-left-right text-3xl text-brand-lightCard mb-2"></i>
+                            <h4 class="font-bold text-white mb-1">NEXUS</h4>
+                            <p class="text-xs text-white/50">USA / Canada</p>
+                        </div>
+
+                        <!-- Viajero Confiable -->
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl flex flex-col items-center text-center">
+                            <i class="ph-fill ph-shield-check text-3xl text-brand-green mb-2"></i>
+                            <h4 class="font-bold text-white mb-1">Viajero Confiable</h4>
+                            <p class="text-xs text-white/50">Mexico</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHY BOOK WITH AIRTROT (Comparison) -->
+                <div>
+                    <h3 class="text-xl lg:text-2xl font-bold text-white mb-4 text-center">Why Book Your World Cup Journey with Airtrot Travels?</h3>
+                    <div class="bg-[#1a1a1a]/80 backdrop-blur-md rounded-[24px] border border-white/10 overflow-hidden shadow-2xl">
+                        <!-- Header Row -->
+                        <div class="grid grid-cols-2 bg-black/40 border-b border-white/10 text-sm font-bold tracking-wider uppercase">
+                            <div class="p-4 text-center text-red-400">The Hassle</div>
+                            <div class="p-4 text-center text-brand-green bg-brand-green/5 border-l border-white/5">The Airtrot Solution</div>
+                        </div>
+                        
+                        <!-- Rows -->
+                        <div class="grid grid-cols-2 border-b border-white/5 text-sm items-center">
+                            <div class="p-4 lg:px-6 text-white/70 flex items-start gap-2">
+                                <i class="ph-fill ph-x-circle text-red-500/70 shrink-0 mt-0.5"></i>
+                                <span>Complex Visa Forms</span>
+                            </div>
+                            <div class="p-4 lg:px-6 bg-brand-green/5 border-l border-white/5 text-white flex items-start gap-2">
+                                <i class="ph-fill ph-check-circle text-brand-green shrink-0 mt-0.5"></i>
+                                <span><strong>Expert Review:</strong> We check every line of your DS-160 and eTA.</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 border-b border-white/5 text-sm items-center">
+                            <div class="p-4 lg:px-6 text-white/70 flex items-start gap-2">
+                                <i class="ph-fill ph-x-circle text-red-500/70 shrink-0 mt-0.5"></i>
+                                <span>Long Interview Wait Times</span>
+                            </div>
+                            <div class="p-4 lg:px-6 bg-brand-green/5 border-l border-white/5 text-white flex items-start gap-2">
+                                <i class="ph-fill ph-check-circle text-brand-green shrink-0 mt-0.5"></i>
+                                <span><strong>Priority Access:</strong> We help you leverage the FIFA PASS system.</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 border-b border-white/5 text-sm items-center">
+                            <div class="p-4 lg:px-6 text-white/70 flex items-start gap-2">
+                                <i class="ph-fill ph-x-circle text-red-500/70 shrink-0 mt-0.5"></i>
+                                <span>Three Countries, Three Rules</span>
+                            </div>
+                            <div class="p-4 lg:px-6 bg-brand-green/5 border-l border-white/5 text-white flex items-start gap-2">
+                                <i class="ph-fill ph-check-circle text-brand-green shrink-0 mt-0.5"></i>
+                                <span><strong>One Unified Plan:</strong> A single itinerary that covers all three nations.</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 text-sm items-center">
+                            <div class="p-4 lg:px-6 text-white/70 flex items-start gap-2">
+                                <i class="ph-fill ph-x-circle text-red-500/70 shrink-0 mt-0.5"></i>
+                                <span>Changing Travel Policies</span>
+                            </div>
+                            <div class="p-4 lg:px-6 bg-brand-green/5 border-l border-white/5 text-white flex items-start gap-2">
+                                <i class="ph-fill ph-check-circle text-brand-green shrink-0 mt-0.5"></i>
+                                <span><strong>Real-Time Alerts:</strong> We keep you updated on 2026 border changes.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CALL TO ACTION -->
+                <div class="bg-brand-lightCard rounded-[24px] lg:rounded-[32px] p-6 lg:p-8 flex flex-col items-center text-center relative overflow-hidden shadow-2xl mt-4">
+                    <div class="absolute inset-0 pattern-dots opacity-40"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-2xl lg:text-3xl font-bold text-[#1A1614] mb-3 tracking-tight">📅 Ready to Secure Your Spot?</h2>
+                        <p class="text-sm lg:text-base text-[#4A423C] font-medium mb-8 max-w-2xl mx-auto">
+                            Don't wait until the stadiums are full and the visa appointments are gone. Book your FIFA 2026 Strategy Session today.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 w-full max-w-4xl mx-auto">
+                            <!-- Option 1 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md border border-black/5 flex flex-col items-center">
+                                <div class="w-12 h-12 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-4">
+                                    <i class="ph-fill ph-calendar-plus text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-[#1A1614] mb-2">Option 1: Pick a Time</h3>
+                                <p class="text-xs text-[#4A423C] mb-6 flex-1">Schedule a 1-on-1 consultation via our digital calendar to map out your World Cup journey.</p>
+                                <a href="https://calendly.com/airtrottravels" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-brand-blue/90 transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                                    Book Your Consultation <i class="ph-bold ph-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <!-- Option 2 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md border border-black/5 flex flex-col items-center">
+                                <div class="w-12 h-12 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center mb-4">
+                                    <i class="ph-fill ph-phone-call text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-[#1A1614] mb-2">Option 2: Speak with an Expert</h3>
+                                <p class="text-xs text-[#4A423C] mb-6 flex-1">Give us a call to discuss your group or individual travel needs right now.</p>
+                                <a href="tel:+13186181178" class="w-full bg-[#1A1614] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-black transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                                    Call us: +1 318-618-1178 <i class="ph-bold ph-phone"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        
+        <!-- Legal Disclaimer -->
+        <div class="w-full text-center mt-6 lg:mt-8 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
+            <p class="text-[9px] sm:text-[10px] text-white/60 max-w-3xl mx-auto leading-relaxed">
+                Disclaimer: Airtrot Travels is an independent travel agency. All FIFA, World Cup, and related trademarks, logos, and copyrights are the exclusive property of FIFA (Fédération Internationale de Football Association). This site is not affiliated with, endorsed by, or sponsored by FIFA.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
