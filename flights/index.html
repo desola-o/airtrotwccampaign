@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Airtrot Travels - World Cup Flights</title>
+    <meta name="description" content="Don’t get denied entry. Check World Cup visa requirements and travel rules for host countries before you book your trip.">
+    <title>World Cup Entry Requirements Checker (Visa & Travel Rules by Country)</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -64,14 +65,12 @@
             background-size: 16px 16px;
         }
 
-        /* Force dark mode for date picker icons */
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(1);
-            opacity: 0.5;
-            cursor: pointer;
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
         }
-        input[type="date"]::-webkit-calendar-picker-indicator:hover {
-            opacity: 1;
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
         @keyframes fadeIn {
@@ -81,12 +80,9 @@
         .animate-fade-in {
             animation: fadeIn 0.4s ease-out forwards;
         }
-        @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        .animate-scale-in {
-            animation: scaleIn 0.5s ease-out forwards;
+        
+        .animate-spin-slow {
+            animation: spin 2s linear infinite;
         }
     </style>
 </head>
@@ -94,7 +90,7 @@
 
     <!-- Background Environment -->
     <div class="fixed inset-0 z-0 pointer-events-none">
-        <img src="https://i.ibb.co/3YRMr9ys/daniel-lim-gt-Kc-H3f5gh0-unsplash.jpg" alt="Airtrot Travels Background" class="w-full h-full object-cover object-center scale-105 filter brightness-50">
+        <img src="https://i.ibb.co/JjD7NqT5/85133.jpg" alt="Airtrot Travels Background" class="w-full h-full object-cover object-center scale-105 filter brightness-50">
         <div class="absolute inset-0 bg-gradient-to-tr from-[#0A0808]/80 via-[#2A221E]/60 to-[#1A1A24]/50"></div>
         <div class="absolute inset-0 backdrop-blur-[4px]"></div>
     </div>
@@ -102,7 +98,7 @@
     <!-- Desktop Wrapper -->
     <div class="relative z-10 w-full max-w-[1200px] flex flex-col items-center pb-12">
         
-        <!-- Top Centered Image Logo -->
+        <!-- Top Centered Image Logo Linked to Website -->
         <div class="w-full flex justify-center mb-0 z-20 relative">
             <a href="https://airtrottravels.com" class="block transition-transform hover:scale-[1.02] active:scale-95 cursor-pointer flex items-center justify-center">
                 <img src="https://i.ibb.co/ksXB0Xrs/Airtrot-Logo-500px-1.png" alt="Airtrot Travels" class="w-[200px] sm:w-[260px] lg:w-[320px] h-auto object-contain drop-shadow-2xl -my-5 sm:-my-8 lg:-my-12">
@@ -110,7 +106,7 @@
         </div>
 
         <!-- Main Panel -->
-        <main class="w-full max-w-4xl glass-panel rounded-[24px] lg:rounded-[32px] shadow-glass flex flex-col p-4 sm:p-6 lg:p-8 border-t-white/20 border-l-white/20 overflow-hidden relative z-10 mt-1 sm:mt-2 lg:mt-4">
+        <main class="w-full glass-panel rounded-[24px] lg:rounded-[32px] shadow-glass flex flex-col p-4 sm:p-6 lg:p-8 border-t-white/20 border-l-white/20 overflow-hidden relative z-10 mt-1 sm:mt-2 lg:mt-4">
             
             <!-- Back to Home Button -->
             <div class="w-full flex justify-start mb-6 lg:mb-8 shrink-0 relative z-20">
@@ -125,145 +121,116 @@
                 <div class="absolute left-0 top-0 w-64 h-64 bg-brand-blue/10 rounded-full blur-[50px] pointer-events-none"></div>
                 <div class="absolute right-0 bottom-0 w-64 h-64 bg-brand-green/10 rounded-full blur-[50px] pointer-events-none"></div>
 
-                <div class="relative z-20 w-full max-w-2xl flex flex-col items-center">
+                <div class="relative z-20 w-full max-w-3xl flex flex-col items-center">
                     <div class="inline-flex items-center gap-2 mb-4 bg-white/80 px-4 py-2 rounded-full w-fit backdrop-blur-sm border border-black/5 shadow-sm">
-                        <i class="ph-fill ph-airplane-takeoff text-brand-blue"></i>
-                        <span class="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-brand-blue">Flight Concierge</span>
+                        <i class="ph-fill ph-globe-hemisphere-west text-brand-blue"></i>
+                        <span class="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-brand-blue">Global Visa Experts</span>
                     </div>
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl leading-[1.15] font-bold tracking-tight mb-4 text-[#25201D]">
-                        Fly to the World Cup<br>
-                        <span class="text-brand-green">Stress Free</span>
+                        World Cup Entry Requirements Checker<br>
+                        <span class="text-brand-green text-xl sm:text-2xl lg:text-3xl font-semibold mt-2 inline-block">(Visa & Travel Rules by Country)</span>
                     </h1>
-                    <p class="text-sm sm:text-base font-medium text-[#4A423C] max-w-lg mx-auto">
-                        We find the best flights, routes, and prices for you. Let our experts handle your journey to the biggest tournament on earth.
+                    <p class="text-sm sm:text-base font-medium text-[#4A423C] mb-2">
+                        🇺🇸 United States • 🇨🇦 Canada • 🇲🇽 Mexico
+                    </p>
+                    <p class="text-xs sm:text-sm text-[#4A423C]/80 max-w-xl">
+                        Get personalized visa requirements instantly. Select your country of citizenship below to see exactly what you need to cross the borders smoothly.
                     </p>
                 </div>
             </div>
 
-            <!-- Form Container -->
-            <div id="formContainer" class="w-full bg-[#2A2420] border border-white/10 rounded-[24px] p-6 lg:p-10 shadow-xl relative z-20 transition-all animate-fade-in">
+            <!-- Input Section -->
+            <div class="w-full max-w-2xl mx-auto bg-[#2A2420] border border-white/10 rounded-[24px] p-6 shadow-xl relative z-20 transition-all focus-within:border-brand-green/50 focus-within:shadow-brand-green/10">
+                <label for="countrySelect" class="block text-sm font-semibold text-white/80 mb-3 uppercase tracking-widest flex items-center justify-center gap-2">
+                    <i class="ph-bold ph-identification-card"></i> Select Your Country of Citizenship
+                </label>
+                <div class="relative">
+                    <select id="countrySelect" class="w-full appearance-none bg-black/40 border border-white/10 text-white text-base sm:text-lg rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all cursor-pointer shadow-inner backdrop-blur-sm">
+                        <option value="" class="bg-[#1a1a1a] text-white/50">-- Choose your country --</option>
+                    </select>
+                    <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
+                        <i class="ph-bold ph-caret-down text-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Container -->
+            <div id="results" class="w-full hidden flex-col gap-6 lg:gap-8 mt-8">
+                <!-- Results will be dynamically inserted here by JavaScript -->
+            </div>
+
+            <!-- Enquire Now Form Area -->
+            <div class="w-full mt-8 lg:mt-12 bg-[#2A2420] border border-white/10 rounded-[24px] p-6 lg:p-10 shadow-xl relative z-20 transition-all">
                 
-                <form id="leadForm" action="https://formspree.io/f/mqegnnlk" method="POST" class="flex flex-col gap-5 lg:gap-6">
-                    
-                    <!-- Route Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-                        <div class="flex flex-col gap-2">
-                            <label for="from" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-map-pin text-brand-blue"></i> From
-                            </label>
-                            <input type="text" id="from" name="from" placeholder="e.g. Lagos" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="to" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-map-pin-line text-brand-green"></i> To
-                            </label>
-                            <input type="text" id="to" name="to" placeholder="World Cup City" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
+                <div id="formHeader" class="flex items-center gap-3 mb-6 lg:mb-8">
+                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-green shrink-0">
+                        <i class="ph-fill ph-paper-plane-tilt text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-white tracking-wide">Enquire Now</h3>
+                        <p class="text-sm text-white/60 mt-1">Need help planning? Send us your details below.</p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="enquireForm" action="https://formspree.io/f/mqegnnlk" method="POST" class="flex flex-col gap-5 lg:gap-6">
+                    <!-- Event / travel type -->
+                    <div class="flex flex-col gap-2">
+                        <label for="eventType" class="text-sm font-semibold text-white/80">Event / travel type</label>
+                        <input type="text" id="eventType" name="eventType" placeholder="Event or travel type that you are interested in" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
+                    </div>
+
+                    <!-- Your name (First name, Surname) -->
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold text-white/80">Your name</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
+                            <input type="text" id="firstName" name="firstName" placeholder="First name" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
+                            <input type="text" id="surname" name="surname" placeholder="Surname" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
                         </div>
                     </div>
 
-                    <!-- Dates Row -->
+                    <!-- Contact Details -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
                         <div class="flex flex-col gap-2">
-                            <label for="depart" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-calendar-plus text-white/50"></i> Departure Date
-                            </label>
-                            <input type="date" id="depart" name="depart" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner text-white/80">
+                            <label for="phone" class="text-sm font-semibold text-white/80">Your phone number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone number" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
                         </div>
                         <div class="flex flex-col gap-2">
-                            <label for="return" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-calendar-check text-white/50"></i> Return Date
-                            </label>
-                            <input type="date" id="return" name="return" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner text-white/80">
+                            <label for="email" class="text-sm font-semibold text-white/80">Your email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30" required>
                         </div>
                     </div>
 
-                    <!-- Details Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-                        <div class="flex flex-col gap-2">
-                            <label for="people" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-users text-white/50"></i> Travelers
-                            </label>
-                            <input type="number" id="people" name="people" min="1" placeholder="Number of Travelers" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="budget" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-wallet text-white/50"></i> Estimated Budget
-                            </label>
-                            <div class="relative">
-                                <select id="budget" name="budget" required class="w-full appearance-none bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all cursor-pointer shadow-inner">
-                                    <option value="" class="bg-[#1a1a1a] text-white/50">Select Budget</option>
-                                    <option value="$500 - $1,000" class="bg-[#1a1a1a] text-white">$500 - $1,000</option>
-                                    <option value="$1,000 - $2,000" class="bg-[#1a1a1a] text-white">$1,000 - $2,000</option>
-                                    <option value="$2,000+" class="bg-[#1a1a1a] text-white">$2,000+</option>
-                                </select>
-                                <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
-                                    <i class="ph-bold ph-caret-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6 border-t border-white/10 pt-6 mt-2">
-                        <div class="flex flex-col gap-2">
-                            <label for="name" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-user text-white/50"></i> Your Name
-                            </label>
-                            <input type="text" id="name" name="name" placeholder="Full Name" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="phone" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-phone text-white/50"></i> Phone Number
-                            </label>
-                            <input type="tel" id="phone" name="phone" placeholder="Include country code" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <!-- Email Input spans both columns -->
-                        <div class="flex flex-col gap-2 sm:col-span-2">
-                            <label for="email" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-envelope text-white/50"></i> Email Address
-                            </label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
+                    <!-- Your message -->
+                    <div class="flex flex-col gap-2">
+                        <label for="message" class="text-sm font-semibold text-white/80">Your message (optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your message" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30 resize-none"></textarea>
                     </div>
 
                     <!-- Submit Button -->
-                    <div class="mt-4">
-                        <button type="submit" class="w-full bg-brand-green hover:bg-[#329231] text-white px-8 py-4 lg:py-5 rounded-xl text-lg font-bold transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2">
-                            Get My Flight Plan <i class="ph-bold ph-paper-plane-tilt"></i>
+                    <div class="mt-2">
+                        <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-brand-green hover:bg-[#329231] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2">
+                            <span>Submit Enquiry</span> <i class="ph-bold ph-arrow-right"></i>
                         </button>
                     </div>
-
                 </form>
-            </div>
 
-            <!-- Success Container -->
-            <div id="successBox" class="hidden w-full bg-[#2A2420] border border-brand-green/30 rounded-[24px] p-8 lg:p-16 shadow-xl relative z-20 text-center">
-                <div class="absolute inset-0 bg-brand-green/5 rounded-[24px] pointer-events-none"></div>
-                <div class="relative z-10 animate-scale-in flex flex-col items-center">
-                    <div class="w-24 h-24 bg-brand-green/20 border border-brand-green/50 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(60,172,59,0.3)]">
-                        <i class="ph-bold ph-check text-5xl text-brand-green"></i>
+                <!-- Success Screen (Hidden by default) -->
+                <div id="formSuccess" class="hidden flex-col items-center justify-center text-center py-6 animate-fade-in">
+                    <div class="w-16 h-16 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green mb-4 border border-brand-green/30">
+                        <i class="ph-fill ph-check-circle text-4xl"></i>
                     </div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Request Received!</h2>
-                    <p class="text-lg text-white/80 max-w-md mx-auto mb-2">Our flight experts are working on your itinerary.</p>
-                    <p class="text-sm text-brand-green/80 font-medium bg-brand-green/10 inline-block px-4 py-2 rounded-full border border-brand-green/20 mt-2 mb-8">
-                        <i class="ph-bold ph-envelope mr-1"></i> We will respond to you shortly via email.
-                    </p>
-
-                    <!-- Immediate Assistance Call Option -->
-                    <div class="w-full border-t border-white/10 pt-8 mt-2 flex flex-col items-center">
-                        <p class="text-sm font-medium text-white/60 mb-4">Need immediate assistance?</p>
-                        <a href="tel:+13186181178" class="inline-flex items-center gap-3 bg-white hover:bg-brand-lightCard text-black px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg active:scale-[0.98]">
-                            <i class="ph-fill ph-phone-call text-brand-green text-2xl"></i> +1 318-618-1178
-                        </a>
-                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-2">Submission Received!</h3>
+                    <p class="text-white/70 text-base max-w-md mb-8">Thank you for reaching out. Our Visa Planning Experts will review your details and get back to you shortly.</p>
+                    
+                    <div class="w-full max-w-md h-[1px] bg-white/10 mb-8"></div>
+                    
+                    <p class="text-white/90 text-sm font-medium mb-4 uppercase tracking-widest">Need immediate assistance?</p>
+                    <a href="tel:+13186181178" class="bg-brand-blue hover:bg-[#3446A3] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(42,57,141,0.4)] active:scale-[0.98] flex items-center justify-center gap-3">
+                        <i class="ph-fill ph-phone-call text-2xl"></i> 
+                        <span class="text-lg">Call +1 318-618-1178</span>
+                    </a>
                 </div>
-            </div>
-
-            <!-- Trust Indicators -->
-            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mt-8 text-xs sm:text-sm text-white/60 font-medium">
-                <span class="flex items-center gap-2"><i class="ph-fill ph-airplane-tilt text-brand-blue text-lg"></i> Best Routes</span>
-                <span class="flex items-center gap-2"><i class="ph-fill ph-money text-brand-green text-lg"></i> Best Prices</span>
-                <span class="flex items-center gap-2"><i class="ph-fill ph-shield-check text-amber-500 text-lg"></i> Secure & Trusted</span>
             </div>
 
         </main>
@@ -271,7 +238,7 @@
         <!-- Legal Disclaimer -->
         <div class="w-full text-center mt-6 lg:mt-8 px-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
             <p class="text-[9px] sm:text-[10px] text-white/60 max-w-3xl mx-auto leading-relaxed">
-                This tool provides flight planning assistance only. Fares and availability are subject to change. For personalized travel packages, contact Airtrot Travels.<br>
+                This tool provides general information only. For personalized travel & visa assistance, contact Airtrot Travels.<br>
                 Disclaimer: Airtrot Travels is an independent travel agency. All FIFA, World Cup, and related trademarks, logos, and copyrights are the exclusive property of FIFA. This site is not affiliated with, endorsed by, or sponsored by FIFA.
             </p>
         </div>
@@ -279,49 +246,478 @@
 
     <!-- Logic Script -->
     <script>
-        document.getElementById("leadForm").addEventListener("submit", async function(e) {
-            e.preventDefault();
+        // Form Submission Logic
+        const form = document.getElementById('enquireForm');
+        const formHeader = document.getElementById('formHeader');
+        const formSuccess = document.getElementById('formSuccess');
+        const submitBtn = document.getElementById('submitBtn');
 
-            const form = e.target;
-            const data = {
-                from: document.getElementById("from").value,
-                to: document.getElementById("to").value,
-                depart: document.getElementById("depart").value,
-                return: document.getElementById("return").value || "One Way",
-                people: document.getElementById("people").value,
-                budget: document.getElementById("budget").value,
-                name: document.getElementById("name").value,
-                phone: document.getElementById("phone").value,
-                email: document.getElementById("email").value
-            };
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            // Set loading state
+            const originalBtnContent = submitBtn.innerHTML;
+            submitBtn.innerHTML = `<span>Sending...</span> <i class="ph-bold ph-spinner animate-spin"></i>`;
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
 
-            // Submit to Formspree silently
+            const data = new FormData(event.target);
+            
             try {
-                await fetch("https://formspree.io/f/mqegnnlk", {
-                    method: "POST",
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
                     headers: {
-                        "Content-Type": "application/json",
-                        "Accept": "application/json"
-                    },
-                    body: JSON.stringify(data)
+                        'Accept': 'application/json'
+                    }
                 });
+                
+                if (response.ok) {
+                    // Hide form and header, show success screen
+                    form.classList.add('hidden');
+                    formHeader.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
+                    formSuccess.classList.add('flex');
+                    form.reset();
+                } else {
+                    const errorData = await response.json();
+                    let errorMsg = 'Oops! There was a problem submitting your form.';
+                    if (Object.hasOwn(errorData, 'errors')) {
+                        errorMsg = errorData.errors.map(e => e.message).join(', ');
+                    }
+                    alert(errorMsg);
+                    resetSubmitButton(originalBtnContent);
+                }
             } catch (error) {
-                console.error("Formspree Error:", error);
-                // Even if Formspree fails (e.g. adblocker), we still transition to success screen to prevent user confusion
+                alert('Oops! There was a problem submitting your form. Please try again.');
+                resetSubmitButton(originalBtnContent);
             }
-
-            // UI Transition
-            const formBox = document.getElementById("formContainer");
-            const successBox = document.getElementById("successBox");
-            
-            formBox.style.opacity = '0';
-            formBox.style.transform = 'translateY(10px)';
-            
-            setTimeout(() => {
-                formBox.classList.add("hidden");
-                successBox.classList.remove("hidden");
-            }, 300);
         });
+
+        function resetSubmitButton(originalContent) {
+            submitBtn.innerHTML = originalContent;
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+        }
+
+        // Country flag emojis mapping
+        const countryFlags = {
+            'Afghanistan': '🇦🇫', 'Albania': '🇦🇱', 'Algeria': '🇩🇿', 'Andorra': '🇦🇩', 'Angola': '🇦🇴',
+            'Antigua and Barbuda': '🇦🇬', 'Argentina': '🇦🇷', 'Armenia': '🇦🇲', 'Australia': '🇦🇺',
+            'Austria': '🇦🇹', 'Azerbaijan': '🇦🇿', 'Bahamas': '🇧🇸', 'Bahrain': '🇧🇭', 'Bangladesh': '🇧🇩',
+            'Barbados': '🇧🇧', 'Belarus': '🇧🇾', 'Belgium': '🇧🇪', 'Belize': '🇧🇿', 'Benin': '🇧🇯',
+            'Bhutan': '🇧🇹', 'Bolivia': '🇧🇴', 'Bosnia and Herzegovina': '🇧🇦', 'Botswana': '🇧🇼',
+            'Brazil': '🇧🇷', 'Brunei': '🇧🇳', 'Bulgaria': '🇧🇬', 'Burkina Faso': '🇧🇫', 'Burundi': '🇧🇮',
+            'Cambodia': '🇰🇭', 'Cameroon': '🇨🇲', 'Canada': '🇨🇦', 'Cape Verde': '🇨🇻',
+            'Central African Republic': '🇨🇫', 'Chad': '🇹🇩', 'Chile': '🇨🇱', 'China': '🇨🇳',
+            'Colombia': '🇨🇴', 'Comoros': '🇰🇲', 'Congo': '🇨🇬', 'Costa Rica': '🇨🇷', 'Croatia': '🇭🇷',
+            'Cuba': '🇨🇺', 'Cyprus': '🇨🇾', 'Czech Republic': '🇨🇿', 'Denmark': '🇩🇰', 'Djibouti': '🇩🇯',
+            'Dominica': '🇩🇲', 'Dominican Republic': '🇩🇴', 'Ecuador': '🇪🇨', 'Egypt': '🇪🇬',
+            'El Salvador': '🇸🇻', 'Equatorial Guinea': '🇬🇶', 'Eritrea': '🇪🇷', 'Estonia': '🇪🇪',
+            'Eswatini': '🇸🇿', 'Ethiopia': '🇪🇹', 'Fiji': '🇫🇯', 'Finland': '🇫🇮', 'France': '🇫🇷',
+            'Gabon': '🇬🇦', 'Gambia': '🇬🇲', 'Georgia': '🇬🇪', 'Germany': '🇩🇪', 'Ghana': '🇬🇭',
+            'Greece': '🇬🇷', 'Grenada': '🇬🇩', 'Guatemala': '🇬🇹', 'Guinea': '🇬🇳', 'Guinea-Bissau': '🇬🇼',
+            'Guyana': '🇬🇾', 'Haiti': '🇭🇹', 'Honduras': '🇭🇳', 'Hong Kong': '🇭🇰', 'Hungary': '🇭🇺',
+            'Iceland': '🇮🇸', 'India': '🇮🇳', 'Indonesia': '🇮🇩', 'Iran': '🇮🇷', 'Iraq': '🇮🇶',
+            'Ireland': '🇮🇪', 'Israel': '🇮🇱', 'Italy': '🇮🇹', 'Jamaica': '🇯🇲', 'Japan': '🇯🇵',
+            'Jordan': '🇯🇴', 'Kazakhstan': '🇰🇿', 'Kenya': '🇰🇪', 'Kiribati': '🇰🇮', 'Kosovo': '🇽🇰',
+            'Kuwait': '🇰🇼', 'Kyrgyzstan': '🇰🇬', 'Laos': '🇱🇦', 'Latvia': '🇱🇻', 'Lebanon': '🇱🇧',
+            'Lesotho': '🇱🇸', 'Liberia': '🇱🇷', 'Libya': '🇱🇾', 'Liechtenstein': '🇱🇮', 'Lithuania': '🇱🇹',
+            'Luxembourg': '🇱🇺', 'Madagascar': '🇲🇬', 'Malawi': '🇲🇼', 'Malaysia': '🇲🇾', 'Maldives': '🇲🇻',
+            'Mali': '🇲🇱', 'Malta': '🇲🇹', 'Marshall Islands': '🇲🇭', 'Mauritania': '🇲🇷',
+            'Mauritius': '🇲🇺', 'Mexico': '🇲🇽', 'Micronesia': '🇫🇲', 'Moldova': '🇲🇩', 'Monaco': '🇲🇨',
+            'Mongolia': '🇲🇳', 'Montenegro': '🇲🇪', 'Morocco': '🇲🇦', 'Mozambique': '🇲🇿', 'Myanmar': '🇲🇲',
+            'Namibia': '🇳🇦', 'Nauru': '🇳🇷', 'Nepal': '🇳🇵', 'Netherlands': '🇳🇱', 'New Zealand': '🇳🇿',
+            'Nicaragua': '🇳🇮', 'Niger': '🇳🇪', 'Nigeria': '🇳🇬', 'North Korea': '🇰🇵',
+            'North Macedonia': '🇲🇰', 'Norway': '🇳🇴', 'Oman': '🇴🇲', 'Pakistan': '🇵🇰', 'Palau': '🇵🇼',
+            'Palestine': '🇵🇸', 'Panama': '🇵🇦', 'Papua New Guinea': '🇵🇬', 'Paraguay': '🇵🇾', 'Peru': '🇵🇪',
+            'Philippines': '🇵🇭', 'Poland': '🇵🇱', 'Portugal': '🇵🇹', 'Qatar': '🇶🇦', 'Romania': '🇷🇴',
+            'Russia': '🇷🇺', 'Rwanda': '🇷🇼', 'Saint Kitts and Nevis': '🇰🇳', 'Saint Lucia': '🇱🇨',
+            'Saint Vincent and the Grenadines': '🇻🇨', 'Samoa': '🇼🇸', 'San Marino': '🇸🇲',
+            'Sao Tome and Principe': '🇸🇹', 'Saudi Arabia': '🇸🇦', 'Senegal': '🇸🇳', 'Serbia': '🇷🇸',
+            'Seychelles': '🇸🇨', 'Sierra Leone': '🇸🇱', 'Singapore': '🇸🇬', 'Slovakia': '🇸🇰',
+            'Slovenia': '🇸🇮', 'Solomon Islands': '🇸🇧', 'Somalia': '🇸🇴', 'South Africa': '🇿🇦',
+            'South Korea': '🇰🇷', 'South Sudan': '🇸🇸', 'Spain': '🇪🇸', 'Sri Lanka': '🇱🇰', 'Sudan': '🇸🇩',
+            'Suriname': '🇸🇷', 'Sweden': '🇸🇪', 'Switzerland': '🇨🇭', 'Syria': '🇸🇾', 'Taiwan': '🇹🇼',
+            'Tajikistan': '🇹🇯', 'Tanzania': '🇹🇿', 'Thailand': '🇹🇭', 'Timor-Leste': '🇹🇱', 'Togo': '🇹🇬',
+            'Tonga': '🇹🇴', 'Trinidad and Tobago': '🇹🇹', 'Tunisia': '🇹🇳', 'Turkey': '🇹🇷',
+            'Turkmenistan': '🇹🇲', 'Tuvalu': '🇹🇻', 'Uganda': '🇺🇬', 'Ukraine': '🇺🇦',
+            'United Arab Emirates': '🇦🇪', 'United Kingdom': '🇬🇧', 'United States': '🇺🇸', 'Uruguay': '🇺🇾',
+            'Uzbekistan': '🇺🇿', 'Vanuatu': '🇻🇺', 'Vatican City': '🇻🇦', 'Venezuela': '🇻🇪',
+            'Vietnam': '🇻🇳', 'Yemen': '🇾🇪', 'Zambia': '🇿🇲', 'Zimbabwe': '🇿🇼'
+        };
+
+        // Comprehensive visa database
+        const visaDatabase = {
+            vwp: ['Andorra', 'Australia', 'Austria', 'Belgium', 'Brunei', 'Chile', 'Croatia', 'Czech Republic', 
+                  'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Ireland',
+                  'Italy', 'Japan', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Monaco',
+                  'Netherlands', 'New Zealand', 'Norway', 'Poland', 'Portugal', 'San Marino', 'Singapore',
+                  'Slovakia', 'Slovenia', 'South Korea', 'Spain', 'Sweden', 'Switzerland', 'Taiwan', 'United Kingdom'],
+            canadaETA: ['Andorra', 'Australia', 'Austria', 'Bahamas', 'Barbados', 'Belgium', 'British Citizen',
+                        'Brunei', 'Bulgaria', 'Chile', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia',
+                        'Finland', 'France', 'Germany', 'Greece', 'Hong Kong', 'Hungary', 'Iceland', 'Ireland',
+                        'Israel', 'Italy', 'Japan', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta',
+                        'Mexico', 'Monaco', 'Netherlands', 'New Zealand', 'Norway', 'Papua New Guinea', 'Poland',
+                        'Portugal', 'Romania', 'Samoa', 'San Marino', 'Singapore', 'Slovakia', 'Slovenia',
+                        'Solomon Islands', 'South Korea', 'Spain', 'Sweden', 'Switzerland', 'Taiwan', 'United Kingdom'],
+            mexicoVisaFree: ['Argentina', 'Australia', 'Austria', 'Belgium', 'Brazil', 'Bulgaria', 'Canada', 'Chile',
+                            'Colombia', 'Costa Rica', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia',
+                            'Finland', 'France', 'Germany', 'Greece', 'Hong Kong', 'Hungary', 'Iceland', 'Ireland',
+                            'Israel', 'Italy', 'Japan', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta',
+                            'Monaco', 'Netherlands', 'New Zealand', 'Norway', 'Panama', 'Paraguay', 'Peru', 'Poland',
+                            'Portugal', 'Romania', 'San Marino', 'Singapore', 'Slovakia', 'Slovenia', 'South Korea',
+                            'Spain', 'Sweden', 'Switzerland', 'Ukraine', 'United Kingdom', 'United States', 'Uruguay',
+                            'Vatican City'],
+            usVisaRequired: ['Afghanistan', 'Algeria', 'Angola', 'Azerbaijan', 'Bangladesh', 'Belarus', 'Cambodia',
+                            'Cameroon', 'China', 'Cuba', 'Egypt', 'Ethiopia', 'Ghana', 'India', 'Indonesia', 'Iran',
+                            'Iraq', 'Jordan', 'Kazakhstan', 'Kenya', 'Lebanon', 'Libya', 'Morocco', 'Myanmar',
+                            'Nepal', 'Nigeria', 'Pakistan', 'Philippines', 'Russia', 'Saudi Arabia', 'Senegal',
+                            'South Africa', 'Sri Lanka', 'Sudan', 'Syria', 'Tanzania', 'Thailand', 'Tunisia',
+                            'Turkey', 'Uganda', 'Ukraine', 'Uzbekistan', 'Venezuela', 'Vietnam', 'Yemen', 'Zimbabwe']
+        };
+
+        const allCountries = Object.keys(countryFlags).sort();
+
+        // Populate dropdown
+        const countrySelect = document.getElementById('countrySelect');
+        allCountries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country;
+            option.textContent = `${countryFlags[country]} ${country}`;
+            option.className = "bg-[#1a1a1a] text-white";
+            countrySelect.appendChild(option);
+        });
+
+        // Event listener
+        countrySelect.addEventListener('change', function() {
+            const selectedCountry = this.value;
+            const resultsDiv = document.getElementById('results');
+            
+            if (selectedCountry) {
+                generateVisaInfo(selectedCountry);
+            } else {
+                resultsDiv.classList.add('hidden');
+                resultsDiv.classList.remove('flex');
+            }
+        });
+
+        function createListItem(text) {
+            return `<li class="flex items-start gap-3"><i class="ph-bold ph-check text-brand-green mt-0.5 shrink-0"></i> <span class="leading-relaxed">${text}</span></li>`;
+        }
+
+        function createSection(title, items) {
+            return `
+                <div class="mb-4">
+                    <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="ph-fill ph-caret-circle-right text-white/50"></i> ${title}</h4>
+                    <ul class="flex flex-col gap-2">
+                        ${items.map(createListItem).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        function createTipBox(title, text, icon = 'ph-lightbulb', colorClass = 'brand-blue') {
+            return `
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 mt-auto">
+                    <h4 class="font-bold text-white flex items-center gap-2 mb-1"><i class="ph-fill ${icon} text-${colorClass}"></i> ${title}</h4>
+                    <p class="text-xs text-white/70 leading-relaxed">${text}</p>
+                </div>
+            `;
+        }
+
+        function createAlertBox(title, text) {
+            return `
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 mt-4">
+                    <h4 class="font-bold text-amber-500 flex items-center gap-2 mb-1"><i class="ph-fill ph-warning-circle"></i> ${title}</h4>
+                    <p class="text-xs text-white/80 leading-relaxed">${text}</p>
+                </div>
+            `;
+        }
+
+        function createLinkButton(url, text) {
+            return `
+                <a href="${url}" target="_blank" class="mt-4 w-full bg-white text-black hover:bg-brand-lightCard py-3 px-4 rounded-xl text-center text-sm font-bold transition-all flex justify-center items-center gap-2 shadow-lg active:scale-[0.98]">
+                    ${text} <i class="ph-bold ph-arrow-up-right text-xs"></i>
+                </a>
+            `;
+        }
+
+        function createCountryCard(name, flag, status) {
+            return `
+                <div class="bg-[#2A2420] border border-white/10 rounded-[24px] p-6 lg:p-8 flex flex-col relative overflow-hidden shadow-lg h-full animate-fade-in group">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full blur-[30px] pointer-events-none group-hover:bg-white/10 transition-colors duration-500"></div>
+
+                    <div class="flex items-start justify-between gap-4 mb-6 border-b border-white/10 pb-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden shadow-md shrink-0 border border-white/10 bg-white/10 flex items-center justify-center text-3xl">
+                                ${flag}
+                            </div>
+                            <div>
+                                <h3 class="text-xl lg:text-2xl font-bold text-white tracking-wide">${name}</h3>
+                                <div class="mt-1">
+                                    <span class="inline-block px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest border ${status.badgeClasses} shadow-sm backdrop-blur-sm">
+                                        ${status.label}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-1 flex flex-col text-sm text-white/70">
+                        ${status.content}
+                    </div>
+                </div>
+            `;
+        }
+
+        function generateVisaInfo(country) {
+            const resultsDiv = document.getElementById('results');
+            
+            const usaStatus = getUSAStatus(country);
+            const canadaStatus = getCanadaStatus(country);
+            const mexicoStatus = getMexicoStatus(country);
+
+            const flag = countryFlags[country] || '🏳️';
+
+            let html = `
+                <div class="flex items-center justify-center gap-3 mb-2 animate-fade-in">
+                    <span class="text-white/50 text-sm font-medium uppercase tracking-widest">Showing requirements for</span>
+                    <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-2 border border-white/10">${flag} ${country}</span>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
+                    ${createCountryCard('United States', '🇺🇸', usaStatus)}
+                    ${createCountryCard('Canada', '🇨🇦', canadaStatus)}
+                    ${createCountryCard('Mexico', '🇲🇽', mexicoStatus)}
+                </div>
+
+                <div class="w-full bg-[#1A1A24] border border-amber-500/30 rounded-[24px] p-6 lg:p-8 flex flex-col relative shadow-xl overflow-hidden animate-fade-in">
+                    <div class="absolute right-0 top-0 w-48 h-48 bg-amber-500/10 rounded-full blur-[40px] pointer-events-none"></div>
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="ph-fill ph-warning text-amber-500"></i> Multi-Country Travel Alert
+                    </h3>
+                    <p class="text-white/80 text-sm mb-4"><strong>Traveling Between Host Countries:</strong></p>
+                    <ul class="flex flex-col gap-2 text-sm text-white/70 mb-6">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-arrow-right text-amber-500 mt-0.5"></i> <span>Entry permission does <strong>not transfer</strong> between the U.S., Canada, and Mexico.</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-arrow-right text-amber-500 mt-0.5"></i> <span>Each country has independent visa and screening rules.</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-arrow-right text-amber-500 mt-0.5"></i> <span>Multiple entries may require multiple authorizations.</span></li>
+                    </ul>
+                    <div class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4">
+                        <h4 class="font-bold text-amber-500 flex items-center gap-2 mb-1"><i class="ph-bold ph-bell-ringing"></i> Key Reminder</h4>
+                        <p class="text-sm text-white/80">A visa or waiver for one host country does not guarantee entry to another. Plan accordingly and obtain all necessary authorizations before traveling.</p>
+                    </div>
+                </div>
+            `;
+
+            resultsDiv.innerHTML = html;
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.classList.add('flex');
+            
+            // Smooth scroll to results
+            setTimeout(() => {
+                resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        function getUSAStatus(country) {
+            if (country === 'United States') {
+                return {
+                    badgeClasses: 'bg-brand-green/10 text-brand-green border-brand-green/30',
+                    label: 'U.S. Citizen',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Valid U.S. passport for international return',
+                            'No visa or authorization needed for domestic travel',
+                            'Government-issued ID required for domestic flights'
+                        ])}
+                        ${createTipBox('Planning Tip', 'If you plan to visit Canada or Mexico during the World Cup, check their entry requirements for U.S. citizens.', 'ph-lightbulb', 'brand-green')}
+                    `
+                };
+            } else if (visaDatabase.vwp.includes(country)) {
+                return {
+                    badgeClasses: 'bg-brand-blue/10 text-[#A4CAE1] border-brand-blue/30',
+                    label: 'ESTA Required (VWP)',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Apply for ESTA online',
+                            'Valid for 2 years or until passport expires',
+                            'Maximum stay of 90 days per visit',
+                            'Valid passport required (typically 6 months validity)',
+                            'Must travel by air or sea'
+                        ])}
+                        ${createSection('Application Process', [
+                            'Apply at least 72 hours before travel',
+                            'Fee: Approximately $21 USD',
+                            'Usually processed within minutes'
+                        ])}
+                        ${createTipBox('Planning Tip', 'Processing times vary. Apply 2-4 weeks before travel to account for World Cup demand.')}
+                        ${createLinkButton('https://esta.cbp.dhs.gov', 'Apply for ESTA')}
+                    `
+                };
+            } else if (country === 'Canada' || country === 'Mexico') {
+                return {
+                    badgeClasses: 'bg-brand-green/10 text-brand-green border-brand-green/30',
+                    label: 'Visa-Free Entry',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            `Valid ${country} passport`,
+                            'No visa required for tourism or attending events',
+                            'May stay up to 6 months'
+                        ])}
+                        ${createTipBox('Planning Tip', `${country} citizens enjoy visa-free access to the U.S. for tourism. Bring proof of World Cup tickets if asked at the border.`, 'ph-lightbulb', 'brand-green')}
+                    `
+                };
+            } else {
+                return {
+                    badgeClasses: 'bg-amber-500/10 text-amber-500 border-amber-500/30',
+                    label: 'B-1/B-2 Visa Required',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Apply for B-1/B-2 Tourist Visa at U.S. Embassy/Consulate',
+                            'Valid passport (6 months beyond intended stay)',
+                            'Completed DS-160 form & interview required',
+                            'Fee: Approx. $185 USD'
+                        ])}
+                        ${createSection('Required Documents', [
+                            'DS-160 confirmation page & receipt',
+                            'Photo meeting requirements',
+                            'Proof of ties to home country',
+                            'World Cup tickets & proof of funds'
+                        ])}
+                        ${createAlertBox('Important', 'Apply early! Visa processing can take months depending on location. We recommend applying 3-6 months before travel.')}
+                        ${createLinkButton('https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html', 'Learn More About Visas')}
+                    `
+                };
+            }
+        }
+
+        function getCanadaStatus(country) {
+            if (country === 'Canada') {
+                return {
+                    badgeClasses: 'bg-brand-green/10 text-brand-green border-brand-green/30',
+                    label: 'Canadian Citizen',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Valid Canadian passport or government-issued ID',
+                            'No visa or authorization needed for domestic travel'
+                        ])}
+                        ${createTipBox('Planning Tip', 'If you plan to visit the U.S. or Mexico during the World Cup, check their entry requirements for Canadian citizens.', 'ph-lightbulb', 'brand-green')}
+                    `
+                };
+            } else if (country === 'United States') {
+                return {
+                    badgeClasses: 'bg-brand-green/10 text-brand-green border-brand-green/30',
+                    label: 'Visa-Free Entry',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Valid U.S. passport',
+                            'No visa required for tourism',
+                            'May stay up to 6 months'
+                        ])}
+                        ${createAlertBox('Note', 'Do not assume U.S. visa approval allows entry into Canada. Canadian entry is completely separate.')}
+                        ${createTipBox('Planning Tip', 'U.S. citizens enjoy visa-free access to Canada. Keep your World Cup tickets handy.', 'ph-lightbulb', 'brand-green')}
+                    `
+                };
+            } else if (visaDatabase.canadaETA.includes(country)) {
+                return {
+                    badgeClasses: 'bg-brand-blue/10 text-[#A4CAE1] border-brand-blue/30',
+                    label: 'eTA Required',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Apply for eTA online',
+                            'Valid for 5 years or until passport expires',
+                            'Valid passport required',
+                            'Must arrive by air'
+                        ])}
+                        ${createSection('Application Process', [
+                            'Apply online - takes about 10 minutes',
+                            'Fee: CAD $7',
+                            'Usually approved within minutes',
+                            'Linked electronically to passport'
+                        ])}
+                        ${createAlertBox('Note', 'The eTA requirement applies even when simply transiting through a Canadian airport.')}
+                        ${createLinkButton('https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html', 'Apply for eTA')}
+                    `
+                };
+            } else {
+                return {
+                    badgeClasses: 'bg-amber-500/10 text-amber-500 border-amber-500/30',
+                    label: 'Temporary Resident Visa Required',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Apply for Temporary Resident Visa (Visitor Visa)',
+                            'Valid passport & completed application',
+                            'Biometrics required',
+                            'Fee: CAD $100 (application) + CAD $85 (biometrics)'
+                        ])}
+                        ${createSection('Required Documents', [
+                            'Proof of financial support',
+                            'Travel itinerary and World Cup tickets',
+                            'Proof of ties to home country',
+                            'Previous travel history'
+                        ])}
+                        ${createAlertBox('Important', 'Processing takes time. Do not assume a U.S. visa grants access to Canada. You must apply separately.')}
+                        ${createLinkButton('https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html', 'Learn More')}
+                    `
+                };
+            }
+        }
+
+        function getMexicoStatus(country) {
+            if (country === 'Mexico') {
+                return {
+                    badgeClasses: 'bg-brand-green/10 text-brand-green border-brand-green/30',
+                    label: 'Mexican Citizen',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Valid Mexican ID or passport for domestic travel',
+                            'No visa or authorization needed'
+                        ])}
+                        ${createTipBox('Planning Tip', 'If you plan to visit the U.S. or Canada during the World Cup, check their entry requirements for Mexican citizens.', 'ph-lightbulb', 'brand-green')}
+                    `
+                };
+            } else if (visaDatabase.mexicoVisaFree.includes(country) || country === 'United States' || country === 'Canada') {
+                return {
+                    badgeClasses: 'bg-brand-green/10 text-brand-green border-brand-green/30',
+                    label: 'Visa-Free Entry',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Valid passport (6 months validity recommended)',
+                            'Complete FMM tourist card',
+                            'No visa required for tourism stays up to 180 days',
+                            'Proof of onward travel may be requested'
+                        ])}
+                        ${createSection('FMM Tourist Card', [
+                            'Available at airports, borders, and online',
+                            'Fee: Approx. $30 USD (often included in airfare)',
+                            'Keep the card with you for departure'
+                        ])}
+                        ${createTipBox('Planning Tip', 'Always confirm current entry rules with official Mexican government sources before travel.', 'ph-lightbulb', 'brand-green')}
+                        ${createLinkButton('https://www.inm.gob.mx/', 'Mexican Immigration')}
+                    `
+                };
+            } else {
+                return {
+                    badgeClasses: 'bg-amber-500/10 text-amber-500 border-amber-500/30',
+                    label: 'Visa Required (Verify)',
+                    content: `
+                        ${createSection('Entry Requirements', [
+                            'Visa may be required for entry',
+                            'Valid passport (6 months validity)',
+                            'Application made at Embassy or Consulate',
+                            'Requirements vary strictly by nationality'
+                        ])}
+                        ${createSection('Exceptions', [
+                            'Some nationals with valid U.S. or Canadian visas may enter visa-free.',
+                            'Confirm this status directly with an embassy.'
+                        ])}
+                        ${createAlertBox('Critical Notice', 'Always confirm current entry rules with official sources. Mexico\'s visa policies can change, and special provisions may apply for the tournament.')}
+                        ${createLinkButton('https://www.gob.mx/sre', 'Foreign Affairs Website')}
+                    `
+                };
+            }
+        }
     </script>
 </body>
 </html>
