@@ -138,127 +138,49 @@
                         We find the best flights, routes, and prices for you. Let our experts handle your journey to the biggest tournament on earth.
                     </p>
                 </div>
-            </div>
+                <!-- Flight Search Widget -->
+<div class="w-full bg-[#2A2420] border border-white/10 rounded-[24px] p-6 lg:p-10 shadow-xl relative z-20 transition-all animate-fade-in">
+    <div class="text-center mb-6">
+        <h2 class="text-2xl lg:text-3xl font-bold text-white mb-3">
+            Search Flights Instantly
+        </h2>
+        <p class="text-sm sm:text-base text-white/70 max-w-2xl mx-auto">
+            Compare routes and prices across airlines through our trusted booking partner.
+        </p>
+    </div>
 
-            <!-- Form Container -->
-            <div id="formContainer" class="w-full bg-[#2A2420] border border-white/10 rounded-[24px] p-6 lg:p-10 shadow-xl relative z-20 transition-all animate-fade-in">
-                
-                <form id="leadForm" action="https://formspree.io/f/mqegjkke" method="POST" class="flex flex-col gap-5 lg:gap-6">
-                    
-                    <!-- Route Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-                        <div class="flex flex-col gap-2">
-                            <label for="from" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-map-pin text-brand-blue"></i> From
-                            </label>
-                            <input type="text" id="from" name="from" placeholder="e.g. Lagos" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="to" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-map-pin-line text-brand-green"></i> To
-                            </label>
-                            <input type="text" id="to" name="to" placeholder="World Cup City" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                    </div>
+    <!-- AVIASALES WIDGET START -->
+    <script async src="https://tpwdgt.com/content?currency=usd&trs=518655&shmarker=717490.wc_flights_page&show_hotels=false&powered_by=true&locale=en_us&searchUrl=search.jetradar.com&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=30&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+    <!-- AVIASALES WIDGET END -->
+</div>
 
-                    <!-- Dates Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-                        <div class="flex flex-col gap-2">
-                            <label for="depart" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-calendar-plus text-white/50"></i> Departure Date
-                            </label>
-                            <input type="date" id="depart" name="depart" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner text-white/80">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="return" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-calendar-check text-white/50"></i> Return Date
-                            </label>
-                            <input type="date" id="return" name="return" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner text-white/80">
-                        </div>
-                    </div>
+<!-- Concierge Option -->
+<div class="w-full mt-8 bg-[#2A2420] border border-white/10 rounded-[24px] p-6 lg:p-8 shadow-xl relative z-20">
+    <div class="text-center max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 mb-4 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+            <i class="ph-fill ph-star text-brand-green"></i>
+            <span class="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-white/80">
+                Concierge Option
+            </span>
+        </div>
 
-                    <!-- Details Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-                        <div class="flex flex-col gap-2">
-                            <label for="people" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-users text-white/50"></i> Travelers
-                            </label>
-                            <input type="number" id="people" name="people" min="1" placeholder="Number of Travelers" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="budget" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-wallet text-white/50"></i> Estimated Budget
-                            </label>
-                            <div class="relative">
-                                <select id="budget" name="budget" required class="w-full appearance-none bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all cursor-pointer shadow-inner">
-                                    <option value="" class="bg-[#1a1a1a] text-white/50">Select Budget</option>
-                                    <option value="$500 - $1,000" class="bg-[#1a1a1a] text-white">$500 - $1,000</option>
-                                    <option value="$1,000 - $2,000" class="bg-[#1a1a1a] text-white">$1,000 - $2,000</option>
-                                    <option value="$2,000+" class="bg-[#1a1a1a] text-white">$2,000+</option>
-                                </select>
-                                <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
-                                    <i class="ph-bold ph-caret-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <h3 class="text-2xl lg:text-3xl font-bold text-white mb-3">
+            Prefer a done-for-you flight plan?
+        </h3>
 
-                    <!-- Contact Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6 border-t border-white/10 pt-6 mt-2">
-                        <div class="flex flex-col gap-2">
-                            <label for="name" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-user text-white/50"></i> Your Name
-                            </label>
-                            <input type="text" id="name" name="name" placeholder="Full Name" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="phone" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-phone text-white/50"></i> Phone Number
-                            </label>
-                            <input type="tel" id="phone" name="phone" placeholder="Include country code" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <!-- Email Input spans both columns -->
-                        <div class="flex flex-col gap-2 sm:col-span-2">
-                            <label for="email" class="text-sm font-semibold text-white/80 flex items-center gap-2">
-                                <i class="ph-bold ph-envelope text-white/50"></i> Email Address
-                            </label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                    </div>
+        <p class="text-sm sm:text-base text-white/70 mb-6">
+            Share your trip details and Airtrot will help source the best routes, pricing, and travel options for your World Cup journey.
+        </p>
 
-                    <!-- Submit Button -->
-                    <div class="mt-4">
-                        <button type="submit" class="w-full bg-brand-green hover:bg-[#329231] text-white px-8 py-4 lg:py-5 rounded-xl text-lg font-bold transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2">
-                            Get My Flight Plan <i class="ph-bold ph-paper-plane-tilt"></i>
-                        </button>
-                    </div>
-
-                </form>
-            </div>
-
-            <!-- Success Container -->
-            <div id="successBox" class="hidden w-full bg-[#2A2420] border border-brand-green/30 rounded-[24px] p-8 lg:p-16 shadow-xl relative z-20 text-center">
-                <div class="absolute inset-0 bg-brand-green/5 rounded-[24px] pointer-events-none"></div>
-                <div class="relative z-10 animate-scale-in flex flex-col items-center">
-                    <div class="w-24 h-24 bg-brand-green/20 border border-brand-green/50 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(60,172,59,0.3)]">
-                        <i class="ph-bold ph-check text-5xl text-brand-green"></i>
-                    </div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Request Received!</h2>
-                    <p class="text-lg text-white/80 max-w-md mx-auto mb-2">Our flight experts are working on your itinerary.</p>
-                    <p class="text-sm text-brand-green/80 font-medium bg-brand-green/10 inline-block px-4 py-2 rounded-full border border-brand-green/20 mt-2 mb-8">
-                        <i class="ph-bold ph-envelope mr-1"></i> We will respond to you shortly via email.
-                    </p>
-
-                    <!-- Immediate Assistance Call Option -->
-                    <div class="w-full border-t border-white/10 pt-8 mt-2 flex flex-col items-center">
-                        <p class="text-sm font-medium text-white/60 mb-4">Need immediate assistance?</p>
-                        <a href="tel:+13186181178" class="inline-flex items-center gap-3 bg-white hover:bg-brand-lightCard text-black px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg active:scale-[0.98]">
-                            <i class="ph-fill ph-phone-call text-brand-green text-2xl"></i> +1 318-618-1178
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+        <a href="https://form.typeform.com/to/oZGWL72Z"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2 bg-brand-blue hover:bg-[#23307A] text-white px-8 py-4 rounded-xl text-base font-bold transition-all shadow-lg active:scale-[0.98]">
+            Start Concierge Request
+            <i class="ph-bold ph-arrow-up-right"></i>
+        </a>
+    </div>
+</div>
             <!-- Trust Indicators -->
             <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mt-8 text-xs sm:text-sm text-white/60 font-medium">
                 <span class="flex items-center gap-2"><i class="ph-fill ph-airplane-tilt text-brand-blue text-lg"></i> Best Routes</span>
