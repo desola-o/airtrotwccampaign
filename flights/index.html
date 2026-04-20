@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Airtrot Travels - World Cup Flights</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Book World Cup 2026 Flights | Travel Concierge | Airtrot Travels</title>
+    <meta name="description" content="Find the best flights to the World Cup 2026 with Airtrot Travels. Compare routes and prices instantly, or use our expert flight concierge for a stress-free trip.">
+    <meta name="keywords" content="World Cup 2026 flights, book World Cup travel, FIFA World Cup flights, sports travel concierge, Airtrot Travels, stress-free flights">
+    
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:title" content="Book World Cup 2026 Flights | Airtrot Travels">
+    <meta property="og:description" content="Compare routes instantly or let our flight concierge plan your stress-free journey to the biggest tournament on earth.">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -176,7 +186,7 @@ See options from major airlines and booking partners. Prefer a specific airline?
             Share your trip details and Airtrot will help source the best routes, pricing, and travel options for your World Cup journey.
         </p>
 
-        <a href="https://form.typeform.com/to/oZGWL72Z"
+        <a href="https://form.typeform.com/to/qBdRUgis"
            target="_blank"
            rel="noopener noreferrer"
            class="inline-flex items-center justify-center gap-2 bg-brand-blue hover:bg-[#23307A] text-white px-8 py-4 rounded-xl text-base font-bold transition-all shadow-lg active:scale-[0.98]">
@@ -205,7 +215,7 @@ See options from major airlines and booking partners. Prefer a specific airline?
 
     <!-- Logic Script -->
     <script>
-        document.getElementById("leadForm").addEventListener("submit", async function(e) {
+        document.getElementById("leadForm")?.addEventListener("submit", async function(e) {
             e.preventDefault();
 
             const form = e.target;
@@ -240,13 +250,15 @@ See options from major airlines and booking partners. Prefer a specific airline?
             const formBox = document.getElementById("formContainer");
             const successBox = document.getElementById("successBox");
             
-            formBox.style.opacity = '0';
-            formBox.style.transform = 'translateY(10px)';
-            
-            setTimeout(() => {
-                formBox.classList.add("hidden");
-                successBox.classList.remove("hidden");
-            }, 300);
+            if(formBox && successBox) {
+                formBox.style.opacity = '0';
+                formBox.style.transform = 'translateY(10px)';
+                
+                setTimeout(() => {
+                    formBox.classList.add("hidden");
+                    successBox.classList.remove("hidden");
+                }, 300);
+            }
         });
     </script>
 </body>
