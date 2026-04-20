@@ -154,59 +154,26 @@
                 <!-- Results will be dynamically inserted here by JavaScript -->
             </div>
 
-            <!-- Enquire Now Form -->
-            <div class="w-full mt-8 lg:mt-12 bg-[#2A2420] border border-white/10 rounded-[24px] p-6 lg:p-10 shadow-xl relative z-20">
-                <div class="flex items-center gap-3 mb-6 lg:mb-8">
-                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-green shrink-0">
-                        <i class="ph-fill ph-paper-plane-tilt text-2xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl lg:text-3xl font-bold text-white tracking-wide">Enquire Now</h3>
-                        <p class="text-sm text-white/60 mt-1">Need help planning? Send us your details below.</p>
-                    </div>
+            <!-- Plan My World Cup Trip CTA -->
+            <div class="w-full mt-8 lg:mt-12 bg-gradient-to-r from-[#2A2420] to-[#1A1A24] border border-white/10 rounded-[24px] p-8 lg:p-12 shadow-xl relative z-20 overflow-hidden group flex flex-col items-center text-center">
+                <!-- Decorative Background Elements -->
+                <div class="absolute inset-0 pattern-dots opacity-20"></div>
+                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-green/10 rounded-full blur-[70px] pointer-events-none group-hover:bg-brand-green/20 transition-colors duration-700"></div>
+                
+                <div class="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-green mb-6 relative z-10 shadow-lg">
+                    <i class="ph-fill ph-airplane-tilt text-3xl"></i>
                 </div>
-
-                <form action="https://formspree.io/f/mqegnnlk" method="POST" class="flex flex-col gap-5 lg:gap-6">
-                    <!-- Event / travel type -->
-                    <div class="flex flex-col gap-2">
-                        <label for="eventType" class="text-sm font-semibold text-white/80">Event / travel type</label>
-                        <input type="text" id="eventType" name="eventType" placeholder="Event or travel type that you are interested in" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                    </div>
-
-                    <!-- Your name (First name, Surname) -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold text-white/80">Your name</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
-                            <input type="text" id="firstName" name="firstName" placeholder="First name" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                            <input type="text" id="surname" name="surname" placeholder="Surname" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                    </div>
-
-                    <!-- Contact Details -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-                        <div class="flex flex-col gap-2">
-                            <label for="phone" class="text-sm font-semibold text-white/80">Your phone number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone number" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="email" class="text-sm font-semibold text-white/80">Your email</label>
-                            <input type="email" id="email" name="email" placeholder="Email" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30" required>
-                        </div>
-                    </div>
-
-                    <!-- Your message -->
-                    <div class="flex flex-col gap-2">
-                        <label for="message" class="text-sm font-semibold text-white/80">Your message (optional)</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Your message" class="w-full bg-black/40 border border-white/10 text-white text-base rounded-xl px-5 py-4 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all shadow-inner placeholder:text-white/30 resize-none"></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="mt-2">
-                        <button type="submit" class="w-full sm:w-auto bg-brand-green hover:bg-[#329231] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2">
-                            Submit Enquiry <i class="ph-bold ph-arrow-right"></i>
-                        </button>
-                    </div>
-                </form>
+                
+                <h3 class="text-2xl lg:text-4xl font-bold text-white tracking-wide mb-4 relative z-10">
+                    Ready to Experience the 2026 World Cup?
+                </h3>
+                <p class="text-base text-white/70 max-w-2xl mb-8 relative z-10 leading-relaxed">
+                    Don't let visa requirements and complex logistics slow you down. Let our experts handle the details while you prepare for the ultimate football experience across North America.
+                </p>
+                
+                <a href="https://form.typeform.com/to/qBdRUgis" target="_blank" rel="noopener noreferrer" class="relative z-10 bg-brand-green hover:bg-[#329231] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold transition-all shadow-lg shadow-brand-green/20 hover:shadow-brand-green/40 active:scale-[0.98] flex items-center justify-center gap-3 text-lg w-full sm:w-auto">
+                    Plan My World Cup Trip <i class="ph-bold ph-arrow-right"></i>
+                </a>
             </div>
 
         </main>
@@ -235,7 +202,7 @@
             'Colombia': '🇨🇴', 'Comoros': '🇰🇲', 'Congo': '🇨🇬', 'Costa Rica': '🇨🇷', 'Croatia': '🇭🇷',
             'Cuba': '🇨🇺', 'Cyprus': '🇨🇾', 'Czech Republic': '🇨🇿', 'Denmark': '🇩🇰', 'Djibouti': '🇩🇯',
             'Dominica': '🇩🇲', 'Dominican Republic': '🇩🇴', 'Ecuador': '🇪🇨', 'Egypt': '🇪🇬',
-            'El Salvador': '🇸🇻', 'Equatorial Guinea': '🇬🇶', 'Eritrea': '🇪🇷', 'Estonia': '🇪🇪',
+            'El Salvador': '🇸🇻', 'Equatorial Guinea': '🇬GQ', 'Eritrea': '🇪🇷', 'Estonia': '🇪🇪',
             'Eswatini': '🇸🇿', 'Ethiopia': '🇪🇹', 'Fiji': '🇫🇯', 'Finland': '🇫🇮', 'France': '🇫🇷',
             'Gabon': '🇬🇦', 'Gambia': '🇬🇲', 'Georgia': '🇬🇪', 'Germany': '🇩🇪', 'Ghana': '🇬🇭',
             'Greece': '🇬🇷', 'Grenada': '🇬🇩', 'Guatemala': '🇬🇹', 'Guinea': '🇬🇳', 'Guinea-Bissau': '🇬🇼',
